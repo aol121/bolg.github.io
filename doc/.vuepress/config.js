@@ -7,7 +7,7 @@ module.exports = {
     head: [
         ['link', { rel: 'icon', href: '/egg.png' }],  //浏览器的标签栏的网页图标
         ['script', { type: 'text/javascript', src: '/live2dModels/live2d/js/live2d.js' }],  //引入live2d
-        ['script', { type: 'text/javascript',async:'async', src: '/live2dModels/live2d/js/init.js' }],  //引入live2d
+        ['script', { type: 'text/javascript',async:'async', src: '/live2dModels/live2d/js/init.js' }],  //引入live2d初始化脚本
     ],
     markdown: {
         lineNumbers: true
@@ -27,7 +27,7 @@ module.exports = {
                 ]
             },
             { text: '功能演示', link: '/pages/folder1/test3.md' },
-            { text: 'Github', link: 'https://github.com/aol121' },
+            { text: 'Github', link: 'https://github.com/aol121/wzp.github.io' },
         ],
         sidebar: {
             '/pages/folder1/':[
