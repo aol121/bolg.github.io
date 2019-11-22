@@ -1,9 +1,9 @@
 ---
 home: true
 heroImage: /egg.png
-heroText: 裂泉的前端记录
+heroText: 辰砂的前端记录
 tagline: 一点一滴都是进步
-actionText: 马上进入 →
+actionText: 狠狠点我 →
 actionLink: /pages/folder1/test1.md
 features:
 - title: 简洁至上
