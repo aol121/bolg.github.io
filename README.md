@@ -1,1 +1,1 @@
-博客网站：[https://aol121.github.io/wzp.github.io/](https://aol121.github.io/wzp.github.io/)
+博客网站：[https://aol121.github.io/wzp/](https://aol121.github.io/wzp/)

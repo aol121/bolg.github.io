@@ -1,6 +1,6 @@
 module.exports = {
     dest: './docs',  // 设置输出目录
-    base: '/wzp.github.io/',// 设置站点根路径
+    base: '/wzp/',// 设置站点根路径
     title: '辰砂首页', // 显示在左上角的网页名称以及首页在浏览器标签显示的title名称
     description: '辰砂的前端记录', // meta 中的描述文字，用于SEO
     // 注入到当前页面的 HTML <head> 中的标签
@@ -27,7 +27,7 @@ module.exports = {
                 ]
             },
             { text: '功能演示', link: '/pages/folder1/test3.md' },
-            { text: 'Github', link: 'https://github.com/aol121/wzp.github.io' },
+            { text: 'Github', link: 'https://github.com/aol121/wzp' },
         ],
         sidebar: {
             '/pages/folder1/':[

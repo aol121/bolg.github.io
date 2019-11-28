@@ -1,7 +1,3 @@
-<ClientOnly>
-  <HomeLayout/>
-</ClientOnly>
-
 # vue笔记
 
 
