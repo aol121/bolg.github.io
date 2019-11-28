@@ -5,7 +5,7 @@ module.exports = {
     description: '辰砂的前端记录', // meta 中的描述文字，用于SEO
     // 注入到当前页面的 HTML <head> 中的标签
     head: [
-        ['link', { rel: 'icon', href: '/egg.png' }],  //浏览器的标签栏的网页图标
+        ['link', { rel: 'icon', href: '/logo.png' }],  //浏览器的标签栏的网页图标
         ['script', { type: 'text/javascript', src: '/live2dModels/live2d/js/live2d.js' }],  //引入live2d
         ['script', { type: 'text/javascript',async:'async', src: '/live2dModels/live2d/js/init.js' }],  //引入live2d初始化脚本
     ],
@@ -14,7 +14,7 @@ module.exports = {
     },
     serviceWorker: true,
     themeConfig: {    
-        logo: '/egg.png',
+        logo: '/logo.png',
         lastUpdated: 'lastUpdate', // string | boolean
         nav: [
             { text: '首页', link: '/' },
@@ -32,19 +32,19 @@ module.exports = {
         sidebar: {
             '/pages/folder1/':[
                 {
-                    title: '测试菜单1',   // 必要的
+                    title: '开发笔记',   // 必要的
                     collapsable: false, // 可选的, 默认值是 true,
                     sidebarDepth: 1,    // 可选的, 默认值是 1
                     children: [
-                        ['test1.md', '子菜单1'],
-                        ['test3.md', '子菜单2']
+                        ['test1.md', '前端开发笔记'],
+                        ['test3.md', 'vue笔记']
                     ]
                 },
                 {
-                    title: '测试菜单2',
+                    title: '杂七杂八',
                     collapsable: false, // 可选的, 默认值是 true,
                     children: [
-                        ['test2.md', '子菜单1']
+                        ['test2.md', 'vuepress+github搭建博客教程']
                     ]
                 }
             ],
