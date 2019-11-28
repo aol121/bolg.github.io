@@ -3,36 +3,577 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>lodash按需加载 | 辰砂首页</title>
+    <title>辰砂首页</title>
     <meta name="description" content="辰砂的前端记录">
-    <link rel="icon" href="/wzp.github.io/egg.png">
+    <link rel="icon" href="/wzp.github.io/logo.png">
   <script type="text/javascript" src="/wzp.github.io/live2dModels/live2d/js/live2d.js"></script>
   <script type="text/javascript" async="async" src="/wzp.github.io/live2dModels/live2d/js/init.js"></script>
     
-    <link rel="preload" href="/wzp.github.io/assets/css/0.styles.8e2e378d.css" as="style"><link rel="preload" href="/wzp.github.io/assets/js/app.5f30b3b7.js" as="script"><link rel="preload" href="/wzp.github.io/assets/js/2.426bab4a.js" as="script"><link rel="preload" href="/wzp.github.io/assets/js/10.d597df0e.js" as="script"><link rel="prefetch" href="/wzp.github.io/assets/js/11.29dedd01.js"><link rel="prefetch" href="/wzp.github.io/assets/js/12.f15bad86.js"><link rel="prefetch" href="/wzp.github.io/assets/js/13.a343ed23.js"><link rel="prefetch" href="/wzp.github.io/assets/js/3.d6f4e7a9.js"><link rel="prefetch" href="/wzp.github.io/assets/js/4.f8fd328f.js"><link rel="prefetch" href="/wzp.github.io/assets/js/5.76a55a5c.js"><link rel="prefetch" href="/wzp.github.io/assets/js/6.f6826849.js"><link rel="prefetch" href="/wzp.github.io/assets/js/7.dc0614d4.js"><link rel="prefetch" href="/wzp.github.io/assets/js/8.35e9a7cf.js"><link rel="prefetch" href="/wzp.github.io/assets/js/9.2899819d.js">
+    <link rel="preload" href="/wzp.github.io/assets/css/0.styles.8e2e378d.css" as="style"><link rel="preload" href="/wzp.github.io/assets/js/app.02196188.js" as="script"><link rel="preload" href="/wzp.github.io/assets/js/2.426bab4a.js" as="script"><link rel="preload" href="/wzp.github.io/assets/js/10.0ba8c131.js" as="script"><link rel="prefetch" href="/wzp.github.io/assets/js/11.29dedd01.js"><link rel="prefetch" href="/wzp.github.io/assets/js/12.f15bad86.js"><link rel="prefetch" href="/wzp.github.io/assets/js/13.a343ed23.js"><link rel="prefetch" href="/wzp.github.io/assets/js/3.d6f4e7a9.js"><link rel="prefetch" href="/wzp.github.io/assets/js/4.f8fd328f.js"><link rel="prefetch" href="/wzp.github.io/assets/js/5.76a55a5c.js"><link rel="prefetch" href="/wzp.github.io/assets/js/6.f6826849.js"><link rel="prefetch" href="/wzp.github.io/assets/js/7.910423a9.js"><link rel="prefetch" href="/wzp.github.io/assets/js/8.e363f5d8.js"><link rel="prefetch" href="/wzp.github.io/assets/js/9.3d366006.js">
     <link rel="stylesheet" href="/wzp.github.io/assets/css/0.styles.8e2e378d.css">
   </head>
   <body>
-    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/wzp.github.io/" class="home-link router-link-active"><img src="/wzp.github.io/egg.png" alt="辰砂首页" class="logo"> <span class="site-name can-hide">辰砂首页</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/wzp.github.io/" class="nav-link">首页</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="分类" class="dropdown-title"><span class="title">分类</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/wzp.github.io/pages/folder1/test1.html" class="nav-link">文章</a></li><li class="dropdown-item"><!----> <a href="/wzp.github.io/pages/folder2/test4.html" class="nav-link">琐碎</a></li></ul></div></div><div class="nav-item"><a href="/wzp.github.io/pages/folder1/test3.html" class="nav-link router-link-exact-active router-link-active">功能演示</a></div><div class="nav-item"><a href="https://github.com/aol121/wzp.github.io" target="_blank" rel="noopener noreferrer" class="nav-link external">
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/wzp.github.io/" class="home-link router-link-active"><img src="/wzp.github.io/logo.png" alt="辰砂首页" class="logo"> <span class="site-name can-hide">辰砂首页</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/wzp.github.io/" class="nav-link">首页</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="分类" class="dropdown-title"><span class="title">分类</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/wzp.github.io/pages/folder1/test1.html" class="nav-link">文章</a></li><li class="dropdown-item"><!----> <a href="/wzp.github.io/pages/folder2/test4.html" class="nav-link">琐碎</a></li></ul></div></div><div class="nav-item"><a href="/wzp.github.io/pages/folder1/test3.html" class="nav-link router-link-exact-active router-link-active">功能演示</a></div><div class="nav-item"><a href="https://github.com/aol121/wzp.github.io" target="_blank" rel="noopener noreferrer" class="nav-link external">
   Github
   <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/wzp.github.io/" class="nav-link">首页</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="分类" class="dropdown-title"><span class="title">分类</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/wzp.github.io/pages/folder1/test1.html" class="nav-link">文章</a></li><li class="dropdown-item"><!----> <a href="/wzp.github.io/pages/folder2/test4.html" class="nav-link">琐碎</a></li></ul></div></div><div class="nav-item"><a href="/wzp.github.io/pages/folder1/test3.html" class="nav-link router-link-exact-active router-link-active">功能演示</a></div><div class="nav-item"><a href="https://github.com/aol121/wzp.github.io" target="_blank" rel="noopener noreferrer" class="nav-link external">
   Github
-  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>测试菜单1</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/wzp.github.io/pages/folder1/test1.html" class="sidebar-link">子菜单1</a></li><li><a href="/wzp.github.io/pages/folder1/test3.html" class="active sidebar-link">子菜单2</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/wzp.github.io/pages/folder1/test3.html#lodash按需加载" class="sidebar-link">lodash按需加载</a></li></ul></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>测试菜单2</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/wzp.github.io/pages/folder1/test2.html" class="sidebar-link">子菜单1</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="lodash按需加载"><a href="#lodash按需加载" class="header-anchor">#</a> lodash按需加载</h2> <p>https://www.jianshu.com/p/f03ff4f3a8b3</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code>    <span class="token keyword">function</span> <span class="token function">reject</span><span class="token punctuation">(</span><span class="token parameter">reason</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">// reason失败态时接收的拒因</span>
-        <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
-            <span class="token comment">// 调用reject 回调对应onRejected函数</span>
-            <span class="token keyword">if</span> <span class="token punctuation">(</span>that<span class="token punctuation">.</span>status <span class="token operator">===</span> <span class="token constant">PENDING</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                <span class="token comment">// 只能由pending状态 =&gt; rejected状态 (避免调用多次resolve reject)</span>
-                that<span class="token punctuation">.</span>status <span class="token operator">=</span> <span class="token constant">REJECTED</span><span class="token punctuation">;</span>
-                that<span class="token punctuation">.</span>reason <span class="token operator">=</span> reason<span class="token punctuation">;</span>
-                that<span class="token punctuation">.</span>onRejectedCallbacks<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token parameter">cb</span> <span class="token operator">=&gt;</span> <span class="token function">cb</span><span class="token punctuation">(</span>that<span class="token punctuation">.</span>reason<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>开发笔记</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/wzp.github.io/pages/folder1/test1.html" class="sidebar-link">前端开发笔记</a></li><li><a href="/wzp.github.io/pages/folder1/test3.html" class="active sidebar-link">vue笔记</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/wzp.github.io/pages/folder1/test3.html#第一次使用vue总结" class="sidebar-link">第一次使用vue总结</a></li><li class="sidebar-sub-header"><a href="/wzp.github.io/pages/folder1/test3.html#开发" class="sidebar-link">开发</a></li><li class="sidebar-sub-header"><a href="/wzp.github.io/pages/folder1/test3.html#上传文件（图片-excel）" class="sidebar-link">上传文件（图片 || excel）</a></li><li class="sidebar-sub-header"><a href="/wzp.github.io/pages/folder1/test3.html#倍数提高打包速度vue" class="sidebar-link">倍数提高打包速度vue</a></li><li class="sidebar-sub-header"><a href="/wzp.github.io/pages/folder1/test3.html#element-ui-多选表格-翻页-回显-记录多选的id" class="sidebar-link">element-ui  多选表格 翻页 回显 记录多选的id</a></li><li class="sidebar-sub-header"><a href="/wzp.github.io/pages/folder1/test3.html#vue-内-监听window-resize-事件" class="sidebar-link">vue 内 监听window.resize 事件</a></li><li class="sidebar-sub-header"><a href="/wzp.github.io/pages/folder1/test3.html#vue-打包文件放到服务器子目录下出现的问题" class="sidebar-link">vue 打包文件放到服务器子目录下出现的问题</a></li><li class="sidebar-sub-header"><a href="/wzp.github.io/pages/folder1/test3.html#vue父子组件生命周期顺序" class="sidebar-link">vue父子组件生命周期顺序</a></li><li class="sidebar-sub-header"><a href="/wzp.github.io/pages/folder1/test3.html#vue生命周期" class="sidebar-link">Vue生命周期</a></li></ul></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>杂七杂八</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/wzp.github.io/pages/folder1/test2.html" class="sidebar-link">vuepress+github搭建博客教程</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><!----> <h1 id="vue笔记"><a href="#vue笔记" class="header-anchor">#</a> vue笔记</h1> <p><a name="yukecx"></a></p> <h2 id="第一次使用vue总结"><a href="#第一次使用vue总结" class="header-anchor">#</a> 第一次使用vue总结</h2> <p>在此之前一直在学习vue的语法，利用vue-cli搭建项目自己练习，却一直无法深刻的理解脚手架里的代码为什么要这么写，直到认真学习了ES6语法，<br>前面的困惑终于豁然开朗，所以就有了首个正式vue项目的诞生。</p> <p><a name="nvrbvr"></a></p> <h3 id="开发过程中遇到的问题"><a href="#开发过程中遇到的问题" class="header-anchor">#</a> 开发过程中遇到的问题</h3> <p>1、项目如何部署的问题</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>因为本项目组都没有搞过vue，甚至真正意义上的前后端分离都是在起步阶段，
+这个低级问题也困扰了好久
+答案是 npm run build  打包后的文件在dist文件夹里 你放啥服务器都可以
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>2、开发时要从服务器获取数据是跨域请求的问题</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>逛论坛获得答案：
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>//  找到项目中的 config 文件夹 中的 index.js
+    dev: {
+    env: require('./dev.env'),
+    port: 8080,
+    autoOpenBrowser: true,
+    assetsSubDirectory: 'static',
+    assetsPublicPath: '/',
+    proxyTable: { //代理
+      '/api': {
+        target: 'http://127.0.0.1:8088',//要跨域的地址
+        changeOrigin: true
+      }
+    },
+    // CSS Sourcemaps off by default because relative paths are &quot;buggy&quot;
+    // with this option, according to the CSS-Loader README
+    // (https://github.com/webpack/css-loader#sourcemaps)
+    // In our experience, they generally work as expected,
+    // just be aware of this issue when enabling this option.
+    cssSourceMap: false
+  }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br></div></div><p>4、当切换路由清除之前模块的定时器</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>//使用 beforeRouteLeave   [参考网址](https://router.vuejs.org/zh-cn/advanced/navigation-guards.html)：https://router.vuejs.org/zh-cn/advanced/navigation-guards.html
+    mounted(){
+      this.getData();
+      clearInterval(this.timer)
+      console.log(this.$router.app._route.fullPath) //可打印出当前页面路由
+      this.timer=setInterval(()=&gt;{
+        this.pageIndex=1;
+        this.realTimeData=[];
+        this.getData()
+      },10000)
+    },
+    beforeRouteLeave (to, from, next) {
+        next()
+          clearInterval(this.timer)
+
+    },
+    methods: {
+      getData() {
+        ...
+      }
+    }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br></div></div><p>5、我的选择器是放在一个dialog里的，我还在选择器外面另外绑定显示这里的值，显示也不会改变<br>不过dialog提交的时候，这个值就能改到我选中的值上了，而且用于提交的参数也是预期的值，但是页面视图就是不变化<br>vue版本到2.5.2，elementUI到1.4.0，<br>情景描述：<br>这是一个后台管理系统，编辑弹框页面<br>表单内容需要预填充<br>而且表单数量不确定</p> <p>解决方案。。。。参考后端大神的思路，虽然人家没搞过vue，也不知道element-ui 只要功力在，万剑不离其宗，佩服。。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>//  template
+    &lt;el-form-item&gt;
+                //精髓在   @visible-change=&quot;selectChange&quot;
+      &lt;el-select @visible-change=&quot;selectChange&quot; v-model=&quot;field.compareType&quot; placeholder=&quot;请选择类型&quot;&gt;
+        &lt;el-option label=&quot;大于&quot; value=&quot;gt&quot;&gt;&lt;/el-option&gt;
+        &lt;el-option label=&quot;小于&quot; value=&quot;lt&quot;&gt;&lt;/el-option&gt;
+        &lt;el-option label=&quot;等于&quot; value=&quot;eq&quot;&gt;&lt;/el-option&gt;
+      &lt;/el-select&gt;
+    &lt;/el-form-item&gt;
+
+
+// js
+
+
+    selectChange(val) {
+        console.log(val)// 展开true || 收起false
+
+        if(this.content &amp;&amp; this.content.length &gt; 0 &amp;&amp; !val) {
+          let selectFieldList = []
+          for(let i in this.content) {
+            for(let j in this.formLabelAlign.fieldList)
+              if(this.content[i].fieldName == this.formLabelAlign.fieldList[j].fieldName) {
+                selectFieldList.push(this.content[i])
+              }
+          }
+          this.formLabelAlign.fieldList = selectFieldList
+        }
+
+      }
+
+
+ //总结：就是在触发select 的change事件后重新赋值 v-model  已达到重新绑定的效果，在好多编辑弹框情景下基本能解决问题了
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br></div></div><p>6、接下来就都是些使用Element-ui 中遇到得问题了</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>仔细对比官方文档基本可以找到对应的解决方案
+不过要注意使用的版本与文档版本要对应
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>7、axios [阿克希奥斯] 如何实现按顺序请求  保证A请求执行完毕再请求B</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>//同时执行多个请求
+
+axios.all([
+
+    axios.get('https://api.github.com/xxx/1'),
+
+    axios.get('https://api.github.com/xxx/2')
+
+  ])
+
+  .then(axios.spread(function (userResp, reposResp) {
+
+    // 上面两个请求都完成后，才执行这个回调方法
+
+    console.log('User', userResp.data);
+
+    console.log('Repositories', reposResp.data);
+
+  }));
+
+
+
+//当所有的请求都完成后，会收到一个数组，包含着响应对象，其中的顺序和请求发送的顺序相同，可以使用 axios.spread 分割成多个单独的响应对象
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br></div></div><p>8、PC端页面与手机端页面根据不同终端渲染不同页面的问题</p> <p>从战略上来讲就是利用userAgent 判断当前设备是手机还是PC</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>//这个是抄别人的
+      is_moblie() {
+        let browser = {
+          versions: function() {
+            let u = navigator.userAgent,
+              app = navigator.appVersion;
+            return { //移动终端浏览器版本信息
+              trident: u.indexOf('Trident') &gt; -1, //IE内核
+              presto: u.indexOf('Presto') &gt; -1, //opera内核
+              webKit: u.indexOf('AppleWebKit') &gt; -1, //苹果、谷歌内核
+              gecko: u.indexOf('Gecko') &gt; -1 &amp;&amp; u.indexOf('KHTML') == -1, //火狐内核
+              mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+              ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+              android: u.indexOf('Android') &gt; -1 || u.indexOf('Linux') &gt; -1, //android终端或者uc浏览器
+              iPhone: u.indexOf('iPhone') &gt; -1, //是否为iPhone或者QQHD浏览器
+              iPad: u.indexOf('iPad') &gt; -1, //是否iPad
+              webApp: u.indexOf('Safari') == -1, //是否web应该程序，没有头部与底部
+              weixin: u.indexOf('MicroMessenger') &gt; -1, //是否微信
+              qq: u.match(/\sQQ/i) == &quot; qq&quot; //是否QQ
+            };
+          }(),
+          language: (navigator.browserLanguage || navigator.language).toLowerCase()
+        }
+
+        if(browser.versions.mobile || browser.versions.ios || browser.versions.android ||
+          browser.versions.iPhone || browser.versions.iPad) {
+//        window.location = &quot;http://m.zhaizhainv.com&quot;;
+          this.isMobile = true;
+        }else {
+          this.isMobile = false;
+        }
+      },
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br></div></div><p>具体如何实施是个很大问题</p> <p>如果是分开写，分别打包就是俩个dist文件夹，里面分别有一个index.html   部署到服务器上它需要一个index作为入口，我本来是想服务入口的index里判断终端类型，然后定向到dist文件夹里的index 实现进入pc还是移动页面，但是axios访问的接口路径就会多一层/dist  就会访问失败</p> <p>接下来就是集中精力搞PC端页面与移动端页面写在一个脚手架里，就不会影响原PC端页面了</p> <p>首先在登录界面从点击登录开始判断终端类型  手机还是PC</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>//Login.vue里的代码
+      if(!self.isMobile) {//是pc
+         if(!res.data.data.accessModuleCodeList) {
+           self.$router.push('/space-page'); //添加router--设置首页
+         } else if(res.data.data.accessModuleCodeList.length == 6) {
+           self.$router.push('/real-time-status'); //添加router--设置首页
+         } else {
+           self.$router.push('/' + self.filterList[0]); //添加router--设置首页
+         }
+         self.$message({
+           type: 'success',
+           message: res.data.message
+         })
+       } else {//是手机
+         self.$router.push('/mobile');
+
+       }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div><p>./src/router/index.js  如何配置呢？</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>export default new Router({
+    routes: [
+        {
+            path: '/',
+            redirect: '/login'  //默认定向至登录页
+        },
+        {//pc端页面
+            path: '/readme',
+            component: resolve =&gt; require(['../components/common/Home.vue'], resolve),
+            children:[
+                {
+                    path: '/',
+                    component: resolve =&gt; require(['../components/page/SpacePage.vue'], resolve)   // 空白页
+                },
+                {
+                    path: '/space-page',
+                    component: resolve =&gt; require(['../components/page/SpacePage.vue'], resolve)   // 空白页
+                },
+                {
+                    path: '/real-time-status',
+                    component: resolve =&gt; require(['../components/page/RealTimeStatus.vue'], resolve)    // 实时状态
+                },
+                {
+                    path: '/historic-record',
+                    component: resolve =&gt; require(['../components/page/HistoricRecord.vue'], resolve)    // 历史记录
+                },
+                {
+                    path: '/alarm-record',
+                    component: resolve =&gt; require(['../components/page/AlarmRecord.vue'], resolve)    // 告警记录
+                },
+                {
+                    path: '/alarm-set',
+                    component: resolve =&gt; require(['../components/page/AlarmSet.vue'], resolve)    // 告警设置
+                },
+                {
+                    path: '/device-management',
+                    component: resolve =&gt; require(['../components/page/DeviceManagement.vue'], resolve)    // 设备管理
+                },
+                {
+                    path: '/user-management',
+                    component: resolve =&gt; require(['../components/page/UserManagement.vue'], resolve)    // 用户管理
+                }
+            ]
+        },
+        {
+            path: '/login',
+            component: resolve =&gt; require(['../components/page/Login.vue'], resolve)
+        },
+        {//手机端页面
+            path: '/mobile',
+            component: resolve =&gt; require(['../components/common/mobileHome.vue'], resolve),
+            children:[
+                {
+                    path: '/',
+                    component: resolve =&gt; require(['../components/page/RealTimeStatus.vue'], resolve)    // 实时状态
+                },
+                {
+                    path: '/mobile/real-time-status',
+                    component: resolve =&gt; require(['../components/page/RealTimeStatus.vue'], resolve)    // 实时状态
+                },
+                {
+                    path: '/mobile/historic-record',
+                    component: resolve =&gt; require(['../components/page/HistoricRecord.vue'], resolve)    // 历史记录
+                },
+                {
+                    path: '/mobile/alarm-record',
+                    component: resolve =&gt; require(['../components/page/AlarmRecord.vue'], resolve)    // 告警记录
+                },
+
+            ]
+        },
+    ]
+})
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br></div></div><p>手机端页面怎么配合呢？</p> <p>中容器是  mobileHome.vue<br>组件    mobileHeader.vue</p> <p>根据路由动态变化的是PC端的子页面<br>注意虽然加载的是相同的子组件但在配置路由的时候不要与PC页面的路由相同否则会跳成PC端的页面</p> <p>css样式</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>*{
+margin:0;
+padding:0;
+-webkit-tap-highlight-color: transparent;/*去除点击按钮出现黑块的问题*/
+-webkit-overflow-scrolling : touch; /*兼容ios上下滚动的问题*/
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>vue的过渡动画</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;transition name=&quot;xx&quot;&gt;
+  &lt;div&gt;
+
+  &lt;/div&gt;
+&lt;/transition&gt;
+
+.xx-enter-active, .xx-leave-active {
+    transition: all .3s ease-in-out;
+  }
+  .xx-enter, .xx-leave-to{
+    opacity: .5;
+    transform: translateX(-100%);
+  }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><p><a name="bxzekv"></a></p> <h2 id="开发"><a href="#开发" class="header-anchor">#</a> 开发</h2> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token comment"># 安装依赖</span>
+    <span class="token function">npm</span> <span class="token function">install</span>
+    //or <span class="token comment"># 建议不要用cnpm  安装有各种诡异的bug 可以通过如下操作解决npm速度慢的问题</span>
+    <span class="token function">npm</span> <span class="token function">install</span> --registry<span class="token operator">=</span>https://registry.npm.taobao.org
+
+    <span class="token comment"># 本地开发 开启服务</span>
+    <span class="token function">npm</span> run dev
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p><a name="fll2xy"></a></p> <h2 id="上传文件（图片-excel）"><a href="#上传文件（图片-excel）" class="header-anchor">#</a> 上传文件（图片 || excel）</h2> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token comment"># 安装依赖</span>
+    <span class="token function">npm</span> <span class="token function">install</span>
+    //or <span class="token comment"># 建议不要用cnpm  安装有各种诡异的bug 可以通过如下操作解决npm速度慢的问题</span>
+    <span class="token function">npm</span> <span class="token function">install</span> --registry<span class="token operator">=</span>https://registry.npm.taobao.org
+
+    <span class="token comment"># 本地开发 开启服务</span>
+    <span class="token function">npm</span> run dev
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p><a name="2943km"></a></p> <h2 id="倍数提高打包速度vue"><a href="#倍数提高打包速度vue" class="header-anchor">#</a> 倍数提高打包速度vue</h2> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code>//  使用  vendor.dll.js   插件
+//  https://zhuanlan.zhihu.com/p/26174425
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p><a name="fifezr"></a></p> <h2 id="element-ui-多选表格-翻页-回显-记录多选的id"><a href="#element-ui-多选表格-翻页-回显-记录多选的id" class="header-anchor">#</a> element-ui  多选表格 翻页 回显 记录多选的id</h2> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token operator">&lt;</span>template<span class="token operator">&gt;</span>
+
+    <span class="token operator">&lt;</span>el-dialog <span class="token assign-left variable">title</span><span class="token operator">=</span><span class="token string">&quot;绑定子诊所&quot;</span> center :visible.sync<span class="token operator">=</span><span class="token string">&quot;dialogFormVisible1&quot;</span> <span class="token assign-left variable">top</span><span class="token operator">=</span><span class="token string">&quot;0&quot;</span> :modal<span class="token operator">=</span><span class="token string">&quot;false&quot;</span> <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;bind-clinic&quot;</span> @close<span class="token operator">=</span><span class="token string">&quot;closeDialog&quot;</span><span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>el-form <span class="token assign-left variable">ref</span><span class="token operator">=</span><span class="token string">&quot;bindform&quot;</span> :model<span class="token operator">=</span><span class="token string">&quot;bindform&quot;</span> label-width<span class="token operator">=</span><span class="token string">&quot;90px&quot;</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>el-row :gutter<span class="token operator">=</span><span class="token string">&quot;20&quot;</span> <span class="token assign-left variable">style</span><span class="token operator">=</span><span class="token string">&quot;padding-top:10px;border-bottom:1px solid #EBF0F2;&quot;</span><span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span>el-col :span<span class="token operator">=</span><span class="token string">&quot;10&quot;</span><span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>div <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;grid-content bg-purple&quot;</span><span class="token operator">&gt;</span>
+              <span class="token operator">&lt;</span>el-form-item <span class="token assign-left variable">label</span><span class="token operator">=</span><span class="token string">&quot;诊所名称&quot;</span><span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>el-input v-model<span class="token operator">=</span><span class="token string">&quot;bindform.name__blk&quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>/el-input<span class="token operator">&gt;</span>
+              <span class="token operator">&lt;</span>/el-form-item<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span>/el-col<span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span>el-col :span<span class="token operator">=</span><span class="token string">&quot;10&quot;</span><span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>div <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;grid-content bg-purple&quot;</span><span class="token operator">&gt;</span>
+              <span class="token operator">&lt;</span>el-form-item <span class="token assign-left variable">label</span><span class="token operator">=</span><span class="token string">&quot;诊所注册人&quot;</span><span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>el-input v-model<span class="token operator">=</span><span class="token string">&quot;bindform.contact__blk||mobile__blk&quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>/el-input<span class="token operator">&gt;</span>
+              <span class="token operator">&lt;</span>/el-form-item<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span>/el-col<span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span>el-col :span<span class="token operator">=</span><span class="token string">&quot;4&quot;</span><span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>div <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;grid-content bg-purple&quot;</span><span class="token operator">&gt;</span>
+              <span class="token operator">&lt;</span>el-button <span class="token assign-left variable">type</span><span class="token operator">=</span><span class="token string">&quot;primary&quot;</span> @click<span class="token operator">=</span><span class="token string">&quot;searchClinic&quot;</span><span class="token operator">&gt;</span>搜索<span class="token operator">&lt;</span>/el-button<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span>/el-col<span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span>el-col :span<span class="token operator">=</span><span class="token string">&quot;24&quot;</span><span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>div <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;grid-content bg-purple&quot;</span> <span class="token assign-left variable">style</span><span class="token operator">=</span><span class="token string">&quot;padding:10px 10px 20px;color:#F56C6C&quot;</span><span class="token operator">&gt;</span>
+              *注：输入诊所名称或护牙士诊所注册人的用户名或其绑定的手机号进行搜索
+            <span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span>/el-col<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>/el-row<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>/el-form<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>el-table :data<span class="token operator">=</span><span class="token string">&quot;bindTableData&quot;</span> <span class="token assign-left variable">ref</span><span class="token operator">=</span><span class="token string">&quot;multipleTable&quot;</span> stripe <span class="token assign-left variable">style</span><span class="token operator">=</span><span class="token string">&quot;width: 100%&quot;</span> max-height<span class="token operator">=</span><span class="token string">&quot;600&quot;</span> @select<span class="token operator">=</span><span class="token string">&quot;tabSelect&quot;</span> @select-all<span class="token operator">=</span><span class="token string">&quot;tabSelectAll&quot;</span> @selection-change<span class="token operator">=</span><span class="token string">&quot;handleSelectionChange&quot;</span><span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span><span class="token operator">!</span>--<span class="token operator">&lt;</span>el-table :data<span class="token operator">=</span><span class="token string">&quot;bindTableData&quot;</span> stripe <span class="token assign-left variable">style</span><span class="token operator">=</span><span class="token string">&quot;width: 100%&quot;</span> max-height<span class="token operator">=</span><span class="token string">&quot;600&quot;</span>  @selection-change<span class="token operator">=</span><span class="token string">&quot;handleSelectionChange&quot;</span><span class="token operator">&gt;</span>--<span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span>el-table-column <span class="token assign-left variable">type</span><span class="token operator">=</span><span class="token string">&quot;selection&quot;</span> <span class="token assign-left variable">width</span><span class="token operator">=</span><span class="token string">&quot;55&quot;</span><span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span>/el-table-column<span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span>el-table-column <span class="token assign-left variable">prop</span><span class="token operator">=</span><span class="token string">&quot;name&quot;</span> <span class="token assign-left variable">label</span><span class="token operator">=</span><span class="token string">&quot;诊所&quot;</span> min-width<span class="token operator">=</span><span class="token string">&quot;100&quot;</span><span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span>/el-table-column<span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span>el-table-column <span class="token assign-left variable">prop</span><span class="token operator">=</span><span class="token string">&quot;contact&quot;</span> <span class="token assign-left variable">label</span><span class="token operator">=</span><span class="token string">&quot;姓名&quot;</span> min-width<span class="token operator">=</span><span class="token string">&quot;100&quot;</span><span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span>/el-table-column<span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span>el-table-column <span class="token assign-left variable">prop</span><span class="token operator">=</span><span class="token string">&quot;mobile&quot;</span> <span class="token assign-left variable">label</span><span class="token operator">=</span><span class="token string">&quot;手机号&quot;</span> min-width<span class="token operator">=</span><span class="token string">&quot;100&quot;</span><span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span>/el-table-column<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>/el-table<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>el-pagination <span class="token assign-left variable">style</span><span class="token operator">=</span><span class="token string">&quot;padding-bottom: 0;&quot;</span> <span class="token assign-left variable">background</span><span class="token operator">=</span><span class="token string">&quot;true&quot;</span> :page-size<span class="token operator">=</span><span class="token string">&quot;bindPageSize&quot;</span> @current-change<span class="token operator">=</span><span class="token string">&quot;bindhandleCurrentChange&quot;</span> <span class="token assign-left variable">layout</span><span class="token operator">=</span><span class="token string">&quot;prev, pager, next&quot;</span> :total<span class="token operator">=</span><span class="token string">&quot;bindTotalRecord&quot;</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>/el-pagination<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>div <span class="token assign-left variable">slot</span><span class="token operator">=</span><span class="token string">&quot;footer&quot;</span> <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;dialog-footer&quot;</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>el-button @click<span class="token operator">=</span><span class="token string">&quot;dialogFormVisible = false&quot;</span><span class="token operator">&gt;</span>取 消<span class="token operator">&lt;</span>/el-button<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>el-button <span class="token assign-left variable">type</span><span class="token operator">=</span><span class="token string">&quot;primary&quot;</span> @click<span class="token operator">=</span><span class="token string">&quot;submitBind&quot;</span><span class="token operator">&gt;</span>提交<span class="token operator">&lt;</span>/el-button<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>/el-dialog<span class="token operator">&gt;</span>
+
+
+<span class="token operator">&lt;</span>/template<span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+  <span class="token builtin class-name">export</span> default <span class="token punctuation">{</span>
+    <span class="token function-name function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+      <span class="token builtin class-name">return</span> <span class="token punctuation">{</span>
+
+
+        searchParams: <span class="token punctuation">{</span><span class="token punctuation">}</span>,
+        bindTableData: <span class="token punctuation">[</span><span class="token punctuation">]</span>,
+        bindPageIndex: <span class="token number">1</span>, //绑定诊所当前页
+        bindPageSize: <span class="token number">8</span>, //绑定诊所每页容量
+        bindTotalRecord: null, //绑定诊所数据总条数
+        isAbleGet: false,
+        dialogFormVisible1: false,
+        selectedArr: <span class="token punctuation">[</span><span class="token punctuation">]</span>, //选中诊所列表
+        labelPosition: <span class="token string">&quot;left&quot;</span>,
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>,
+    <span class="token function-name function">mounted</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">}</span>,
+    methods: <span class="token punctuation">{</span>
+      <span class="token function-name function">submitBind</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        if<span class="token punctuation">(</span>this.multipleSelection.length <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+          this.<span class="token variable">$axios</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+            url: this.url.submitBInd,
+            method: <span class="token string">'post'</span>,
+            data: <span class="token punctuation">{</span>
+              params: <span class="token punctuation">{</span>
+                tenantIdList: this.selectedArr
+              <span class="token punctuation">}</span>
             <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span><span class="token punctuation">)</span>.then<span class="token punctuation">((</span>res<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+            if<span class="token punctuation">(</span>res.data.success<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              this.dialogFormVisible1 <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+              this.getData<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+              this.<span class="token variable">$message</span>.success<span class="token punctuation">(</span>res.data.message <span class="token operator">||</span> <span class="token string">&quot;绑定成功&quot;</span><span class="token punctuation">)</span>
+              console.log<span class="token punctuation">(</span>res.data.data<span class="token punctuation">)</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> if<span class="token punctuation">(</span>res.data.code <span class="token operator">==</span> <span class="token number">200</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              this.<span class="token variable">$router</span>.push<span class="token punctuation">(</span><span class="token string">'/login'</span><span class="token punctuation">)</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+              console.log<span class="token punctuation">(</span>res.data.data<span class="token punctuation">)</span>
+              this.<span class="token variable">$message</span>.error<span class="token punctuation">(</span>res.data.message<span class="token punctuation">)</span>
+            <span class="token punctuation">}</span>
+          <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+          this.<span class="token variable">$message</span>.error<span class="token punctuation">(</span><span class="token string">'请至少选择一个要绑定的诊所'</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>,
+      handleCurrentChange<span class="token punctuation">(</span>val<span class="token punctuation">)</span> <span class="token punctuation">{</span> //翻页
+        this.pageIndex <span class="token operator">=</span> val<span class="token punctuation">;</span>
+        this.getData<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>,
+      <span class="token function-name function">registClinic</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        this.dialogFormVisible <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>,
+      <span class="token function-name function">searchClinic</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> //搜索诊所用于绑定
+        this.searchParams <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+        for<span class="token punctuation">(</span>let key <span class="token keyword">in</span> this.bindform<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          if<span class="token punctuation">(</span>this.bindform<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            this.searchParams<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">=</span> this.bindform<span class="token punctuation">[</span>key<span class="token punctuation">]</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        this.bindClinic<span class="token punctuation">(</span>this.searchParams<span class="token punctuation">)</span>
+        console.log<span class="token punctuation">(</span>this.bindform<span class="token punctuation">)</span>
+      <span class="token punctuation">}</span>,
+      bindhandleCurrentChange<span class="token punctuation">(</span>val<span class="token punctuation">)</span> <span class="token punctuation">{</span> //翻页
+        this.bindPageIndex <span class="token operator">=</span> val<span class="token punctuation">;</span>
+        this.bindClinic<span class="token punctuation">(</span>this.searchParams<span class="token punctuation">)</span>
+        console.log<span class="token punctuation">(</span><span class="token string">&quot;433--selectedArr=&quot;</span>,this.selectedArr<span class="token punctuation">)</span>
+      <span class="token punctuation">}</span>,
+      <span class="token function-name function">closeDialog</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        this.bindform <span class="token operator">=</span> <span class="token punctuation">{</span>
+          name__blk: <span class="token string">''</span>,
+          <span class="token string">'contact__blk||mobile__blk'</span><span class="token builtin class-name">:</span> <span class="token string">''</span>
+        <span class="token punctuation">}</span>
+        this.bindTableData <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        this.selectedArr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        this.searchParams <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>//重置搜索参数
+      <span class="token punctuation">}</span>,
+      bindClinic<span class="token punctuation">(</span>v<span class="token punctuation">)</span> <span class="token punctuation">{</span> //绑定诊所
+
+        <span class="token builtin class-name">let</span> params <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+        if<span class="token punctuation">(</span><span class="token operator">!</span><span class="token operator">!</span>v <span class="token operator">&amp;&amp;</span> JSON.stringify<span class="token punctuation">(</span>v<span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token string">'{}'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          params <span class="token operator">=</span> <span class="token punctuation">{</span>
+            params: v,
+            pageIndex: this.bindPageIndex - <span class="token number">1</span>,
+            pageSize: this.bindPageSize,
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+          this.dialogFormVisible1 <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+          this.bindTableData <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+          this.bindTotalRecord <span class="token operator">=</span> null
+          <span class="token builtin class-name">return</span>
+
+        <span class="token punctuation">}</span>
+
+        this.<span class="token variable">$axios</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+          url: this.url.searchClinic,
+          method: <span class="token string">'get'</span>,
+          params: params
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>.then<span class="token punctuation">((</span>res<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+          if<span class="token punctuation">(</span>res.data.success<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            this.dialogFormVisible1 <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+            this.bindTotalRecord <span class="token operator">=</span> res.data.data.totalRecord
+            this.bindTableData <span class="token operator">=</span> res.data.data.items<span class="token punctuation">;</span>
+
+            for<span class="token punctuation">(</span>let i <span class="token keyword">in</span> this.bindTableData<span class="token punctuation">)</span> <span class="token punctuation">{</span> //用于多选翻页回显
+              this.bindTableData<span class="token punctuation">[</span>i<span class="token punctuation">]</span>.check <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+              if<span class="token punctuation">(</span>this.selectedArr.length<span class="token operator">&gt;</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                for<span class="token punctuation">(</span>let j <span class="token keyword">in</span> this.selectedArr<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                  if<span class="token punctuation">(</span>this.selectedArr<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">==</span><span class="token operator">=</span> this.bindTableData<span class="token punctuation">[</span>i<span class="token punctuation">]</span>.tenantId<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                    this.bindTableData<span class="token punctuation">[</span>i<span class="token punctuation">]</span>.check <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+                    this.<span class="token variable">$nextTick</span><span class="token punctuation">((</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+                      this.<span class="token variable">$refs</span>.multipleTable.toggleRowSelection<span class="token punctuation">(</span>this.bindTableData<span class="token punctuation">[</span>i<span class="token punctuation">]</span>, <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+                  <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span>
+              <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+            console.log<span class="token punctuation">(</span><span class="token number">463</span>, this.bindTableData<span class="token punctuation">)</span>
+          <span class="token punctuation">}</span> <span class="token keyword">else</span> if<span class="token punctuation">(</span>res.data.code <span class="token operator">==</span> <span class="token number">200</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            this.<span class="token variable">$router</span>.push<span class="token punctuation">(</span><span class="token string">'/login'</span><span class="token punctuation">)</span>
+          <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            this.<span class="token variable">$message</span>.error<span class="token punctuation">(</span>res.data.message<span class="token punctuation">)</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+      <span class="token punctuation">}</span>,
+      tabSelect<span class="token punctuation">(</span>selection, row<span class="token punctuation">)</span> <span class="token punctuation">{</span> //表格逐个选择
+        console.log<span class="token punctuation">(</span>row<span class="token punctuation">)</span>
+        row.check <span class="token operator">=</span> <span class="token operator">!</span>row.check
+        if<span class="token punctuation">(</span>row.check<span class="token punctuation">)</span> <span class="token punctuation">{</span> //选中状态
+          if<span class="token punctuation">(</span>this.selectedArr.length <span class="token operator">==</span><span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            this.selectedArr.push<span class="token punctuation">(</span>row.tenantId<span class="token punctuation">)</span>
+          <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            if<span class="token punctuation">(</span>this.selectedArr.indexOf<span class="token punctuation">(</span>row.tenantId<span class="token punctuation">)</span> <span class="token operator">==</span><span class="token operator">=</span> -1<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              this.selectedArr.push<span class="token punctuation">(</span>row.tenantId<span class="token punctuation">)</span>
+            <span class="token punctuation">}</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span> //取消选中状态
+          <span class="token builtin class-name">let</span> index <span class="token operator">=</span> this.selectedArr.indexOf<span class="token punctuation">(</span>row.tenantId<span class="token punctuation">)</span>
+          this.selectedArr.splice<span class="token punctuation">(</span>index, <span class="token number">1</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+
+        console.log<span class="token punctuation">(</span><span class="token string">'488-this.selectedArr='</span>, this.selectedArr<span class="token punctuation">)</span>
+
+      <span class="token punctuation">}</span>,
+      tabSelectAll<span class="token punctuation">(</span>selection<span class="token punctuation">)</span> <span class="token punctuation">{</span> //表格全选
+        alert<span class="token punctuation">(</span><span class="token string">'tabSelectAll==change'</span><span class="token punctuation">)</span>
+        console.log<span class="token punctuation">(</span><span class="token string">'selection'</span>,selection<span class="token punctuation">)</span>
+        if<span class="token punctuation">(</span>selection.length <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          for<span class="token punctuation">(</span>let i <span class="token keyword">in</span> selection<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            selection<span class="token punctuation">[</span>i<span class="token punctuation">]</span>.check <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+            if<span class="token punctuation">(</span>selection<span class="token punctuation">[</span>i<span class="token punctuation">]</span>.check<span class="token punctuation">)</span> <span class="token punctuation">{</span> //选中状态
+              if<span class="token punctuation">(</span>this.selectedArr.length <span class="token operator">==</span><span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                this.selectedArr.push<span class="token punctuation">(</span>selection<span class="token punctuation">[</span>i<span class="token punctuation">]</span>.tenantId<span class="token punctuation">)</span>
+              <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                if<span class="token punctuation">(</span>this.selectedArr.indexOf<span class="token punctuation">(</span>selection<span class="token punctuation">[</span>i<span class="token punctuation">]</span>.tenantId<span class="token punctuation">)</span> <span class="token operator">==</span><span class="token operator">=</span> -1<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                  this.selectedArr.push<span class="token punctuation">(</span>selection<span class="token punctuation">[</span>i<span class="token punctuation">]</span>.tenantId<span class="token punctuation">)</span>
+                <span class="token punctuation">}</span>
+              <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span> //取消选中状态
+              if<span class="token punctuation">(</span>this.selectedArr.indexOf<span class="token punctuation">(</span>selection<span class="token punctuation">[</span>i<span class="token punctuation">]</span>.tenantId<span class="token punctuation">)</span> <span class="token operator">&gt;</span> -1<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token builtin class-name">let</span> index <span class="token operator">=</span> this.selectedArr.indexOf<span class="token punctuation">(</span>selection<span class="token punctuation">[</span>i<span class="token punctuation">]</span>.tenantId<span class="token punctuation">)</span>
+                this.selectedArr.splice<span class="token punctuation">(</span>index, <span class="token number">1</span><span class="token punctuation">)</span>
+              <span class="token punctuation">}</span>
+
+            <span class="token punctuation">}</span>
+
+          <span class="token punctuation">}</span>
+          console.log<span class="token punctuation">(</span><span class="token string">'520-this.selectedArr=='</span>, this.selectedArr<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>else <span class="token punctuation">{</span>//全不选
+//        this.selectedArr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>//清空选择
+          for<span class="token punctuation">(</span>let i <span class="token keyword">in</span> this.bindTableData<span class="token punctuation">)</span> <span class="token punctuation">{</span> //用于多选翻页回显
+              this.bindTableData<span class="token punctuation">[</span>i<span class="token punctuation">]</span>.check <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+              for<span class="token punctuation">(</span>let j <span class="token keyword">in</span> this.selectedArr<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                if<span class="token punctuation">(</span>this.bindTableData<span class="token punctuation">[</span>i<span class="token punctuation">]</span>.tenantId<span class="token operator">==</span><span class="token operator">=</span>this.selectedArr<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                  this.selectedArr.splice<span class="token punctuation">(</span>j,1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+              <span class="token punctuation">}</span>
+          <span class="token punctuation">}</span>
+          console.log<span class="token punctuation">(</span><span class="token string">'531--this.selectedArr='</span>,this.selectedArr<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+
+      <span class="token punctuation">}</span>,
+
+
     <span class="token punctuation">}</span>
-</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+  <span class="token punctuation">}</span>
+<span class="token operator">&lt;</span>/script<span class="token operator">&gt;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br><span class="line-number">111</span><br><span class="line-number">112</span><br><span class="line-number">113</span><br><span class="line-number">114</span><br><span class="line-number">115</span><br><span class="line-number">116</span><br><span class="line-number">117</span><br><span class="line-number">118</span><br><span class="line-number">119</span><br><span class="line-number">120</span><br><span class="line-number">121</span><br><span class="line-number">122</span><br><span class="line-number">123</span><br><span class="line-number">124</span><br><span class="line-number">125</span><br><span class="line-number">126</span><br><span class="line-number">127</span><br><span class="line-number">128</span><br><span class="line-number">129</span><br><span class="line-number">130</span><br><span class="line-number">131</span><br><span class="line-number">132</span><br><span class="line-number">133</span><br><span class="line-number">134</span><br><span class="line-number">135</span><br><span class="line-number">136</span><br><span class="line-number">137</span><br><span class="line-number">138</span><br><span class="line-number">139</span><br><span class="line-number">140</span><br><span class="line-number">141</span><br><span class="line-number">142</span><br><span class="line-number">143</span><br><span class="line-number">144</span><br><span class="line-number">145</span><br><span class="line-number">146</span><br><span class="line-number">147</span><br><span class="line-number">148</span><br><span class="line-number">149</span><br><span class="line-number">150</span><br><span class="line-number">151</span><br><span class="line-number">152</span><br><span class="line-number">153</span><br><span class="line-number">154</span><br><span class="line-number">155</span><br><span class="line-number">156</span><br><span class="line-number">157</span><br><span class="line-number">158</span><br><span class="line-number">159</span><br><span class="line-number">160</span><br><span class="line-number">161</span><br><span class="line-number">162</span><br><span class="line-number">163</span><br><span class="line-number">164</span><br><span class="line-number">165</span><br><span class="line-number">166</span><br><span class="line-number">167</span><br><span class="line-number">168</span><br><span class="line-number">169</span><br><span class="line-number">170</span><br><span class="line-number">171</span><br><span class="line-number">172</span><br><span class="line-number">173</span><br><span class="line-number">174</span><br><span class="line-number">175</span><br><span class="line-number">176</span><br><span class="line-number">177</span><br><span class="line-number">178</span><br><span class="line-number">179</span><br><span class="line-number">180</span><br><span class="line-number">181</span><br><span class="line-number">182</span><br><span class="line-number">183</span><br><span class="line-number">184</span><br><span class="line-number">185</span><br><span class="line-number">186</span><br><span class="line-number">187</span><br><span class="line-number">188</span><br><span class="line-number">189</span><br><span class="line-number">190</span><br><span class="line-number">191</span><br><span class="line-number">192</span><br><span class="line-number">193</span><br><span class="line-number">194</span><br><span class="line-number">195</span><br><span class="line-number">196</span><br><span class="line-number">197</span><br><span class="line-number">198</span><br><span class="line-number">199</span><br><span class="line-number">200</span><br><span class="line-number">201</span><br><span class="line-number">202</span><br><span class="line-number">203</span><br><span class="line-number">204</span><br><span class="line-number">205</span><br><span class="line-number">206</span><br><span class="line-number">207</span><br><span class="line-number">208</span><br><span class="line-number">209</span><br><span class="line-number">210</span><br><span class="line-number">211</span><br><span class="line-number">212</span><br><span class="line-number">213</span><br><span class="line-number">214</span><br><span class="line-number">215</span><br><span class="line-number">216</span><br><span class="line-number">217</span><br><span class="line-number">218</span><br><span class="line-number">219</span><br><span class="line-number">220</span><br><span class="line-number">221</span><br><span class="line-number">222</span><br><span class="line-number">223</span><br><span class="line-number">224</span><br><span class="line-number">225</span><br><span class="line-number">226</span><br><span class="line-number">227</span><br><span class="line-number">228</span><br><span class="line-number">229</span><br><span class="line-number">230</span><br><span class="line-number">231</span><br><span class="line-number">232</span><br><span class="line-number">233</span><br><span class="line-number">234</span><br><span class="line-number">235</span><br><span class="line-number">236</span><br><span class="line-number">237</span><br><span class="line-number">238</span><br><span class="line-number">239</span><br><span class="line-number">240</span><br><span class="line-number">241</span><br><span class="line-number">242</span><br><span class="line-number">243</span><br><span class="line-number">244</span><br><span class="line-number">245</span><br></div></div><p><a name="79zvzw"></a></p> <h2 id="vue-内-监听window-resize-事件"><a href="#vue-内-监听window-resize-事件" class="header-anchor">#</a> vue 内 监听window.resize 事件</h2> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token function-name function">mounted</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      this.getData<span class="token punctuation">(</span><span class="token punctuation">)</span>//初始加载
+      const that <span class="token operator">=</span> this
+        window.onresize <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+          that.getData<span class="token punctuation">(</span><span class="token punctuation">)</span>//窗口变化重新加载
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>,
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p><a name="s86xtl"></a></p> <h2 id="vue-打包文件放到服务器子目录下出现的问题"><a href="#vue-打包文件放到服务器子目录下出现的问题" class="header-anchor">#</a> vue 打包文件放到服务器子目录下出现的问题</h2> <p>1.图片资源作为背景时无法访问<br>解决：</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code>// build/utils.js
+     <span class="token keyword">if</span> <span class="token punctuation">(</span>options.extract<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+     <span class="token builtin class-name">return</span> ExtractTextPlugin.extract<span class="token punctuation">(</span><span class="token punctuation">{</span>
+       use: loaders,
+       publicPath:<span class="token string">'../../'</span>,//修改这个
+       fallback: <span class="token string">'vue-style-loader'</span>,
+
+     <span class="token punctuation">}</span><span class="token punctuation">)</span>
+   <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+     <span class="token builtin class-name">return</span> <span class="token punctuation">[</span><span class="token string">'vue-style-loader'</span><span class="token punctuation">]</span>.concat<span class="token punctuation">(</span>loaders<span class="token punctuation">)</span>
+   <span class="token punctuation">}</span>
+// config/index.js
+   build: <span class="token punctuation">{</span>//注意位置！
+   // Template <span class="token keyword">for</span> index.html
+   index: path.resolve<span class="token punctuation">(</span>__dirname, <span class="token string">'../dist/index.html'</span><span class="token punctuation">)</span>,
+
+   // Paths
+   assetsRoot: path.resolve<span class="token punctuation">(</span>__dirname, <span class="token string">'../dist'</span><span class="token punctuation">)</span>,
+   assetsSubDirectory: <span class="token string">'static'</span>,
+   assetsPublicPath: <span class="token string">'./'</span>,//改为相对路径
+     <span class="token punctuation">..</span>.
+ <span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br></div></div><p>##打包后css引入的图片无法显示</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code>// config/index.js
+
+   build:<span class="token punctuation">{</span>
+     assetsPublicPath: <span class="token string">'./'</span>,//改这里
+   <span class="token punctuation">}</span>
+   //  build/until.js
+   <span class="token keyword">if</span> <span class="token punctuation">(</span>options.extract<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+     <span class="token builtin class-name">return</span> ExtractTextPlugin.extract<span class="token punctuation">(</span><span class="token punctuation">{</span>
+       use: loaders,
+        publicPath:<span class="token string">'../../'</span>, //修改这里
+       fallback: <span class="token string">'vue-style-loader'</span>
+     <span class="token punctuation">}</span><span class="token punctuation">)</span>
+   <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+     <span class="token builtin class-name">return</span> <span class="token punctuation">[</span><span class="token string">'vue-style-loader'</span><span class="token punctuation">]</span>.concat<span class="token punctuation">(</span>loaders<span class="token punctuation">)</span>
+   <span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><p><a name="ig3qys"></a></p> <h2 id="vue父子组件生命周期顺序"><a href="#vue父子组件生命周期顺序" class="header-anchor">#</a> vue父子组件生命周期顺序</h2> <p><a name="haJ3U"></a></p> <h3 id="一、加载渲染过程"><a href="#一、加载渲染过程" class="header-anchor">#</a> 一、加载渲染过程</h3> <p>父beforeCreate-&gt;父created-&gt;父beforeMount-&gt;子beforeCreate-&gt;子created-&gt;子beforeMount-&gt;子mounted-&gt;父mounted
+<a name="L5WjN"></a></p> <h3 id="二、子组件更新过程"><a href="#二、子组件更新过程" class="header-anchor">#</a> 二、子组件更新过程</h3> <p>父beforeUpdate-&gt;子beforeUpdate-&gt;子updated-&gt;父updated
+<a name="71DKC"></a></p> <h3 id="三、父组件更新过程"><a href="#三、父组件更新过程" class="header-anchor">#</a> 三、父组件更新过程</h3> <p>父beforeUpdate-&gt;父updated
+<a name="yr0fG"></a></p> <h3 id="四、销毁过程"><a href="#四、销毁过程" class="header-anchor">#</a> 四、销毁过程</h3> <p>父beforeDestroy-&gt;子beforeDestroy-&gt;子destroyed-&gt;父destroyed</p> <p><a name="cx1vob"></a></p> <h2 id="vue生命周期"><a href="#vue生命周期" class="header-anchor">#</a> Vue生命周期</h2> <ol><li><p>实例、组件通过new Vue() 创建出来之后会初始化事件和生命周期，然后就会执行beforeCreate钩子函数，这个时候，数据还没有挂载，只是一个空壳，无法访问到数据和真实的dom，一般不做操作</p></li> <li><p>挂载数据，绑定事件等等，然后执行created函数，这个时候已经可以使用到数据，也可以更改数据,在这里更改数据不会触发updated函数，这里是渲染前倒数第二次更改数据的机会，不会触发其他的钩子函数，一般可以在这里做初始数据的获取</p></li> <li><p>接下来开始找实例或者组件对应的模板，编译模板为虚拟dom放入到render函数中准备渲染，然后执行beforeMount钩子函数，在这个函数中虚拟dom已经创建完成，马上就要渲染,在这里也可以更改数据，不会触发updated，这里是渲染前最后一次更改数据的机会，不会触发其他的钩子函数，一般可以在这里做初始数据的获取</p></li> <li><p>接下来开始render，渲染出真实dom，然后执行mounted钩子函数，此时，组件已经出现在页面中，数据、真实dom都已经处理好了,事件都已经挂载好了，可以在这里操作真实dom等事情...</p></li> <li><p>当组件或实例的数据更改之后，会立即执行beforeUpdate，然后vue的虚拟dom机制会重新构建虚拟dom与上一次的虚拟dom树利用diff算法进行对比之后重新渲染，一般不做什么事儿</p></li> <li><p>当更新完成后，执行updated，数据已经更改完成，dom也重新render完成，可以操作更新后的虚拟dom</p></li> <li><p>当经过某种途径调用$destroy方法后，立即执行beforeDestroy，一般在这里做一些善后工作，例如清除计时器、清除非指令绑定的事件等等</p></li> <li><p>组件的数据绑定、监听...去掉后只剩下dom空壳，这个时候，执行destroyed，在这里做善后工作也可以</p></li></ol></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">lastUpdate:</span> <span class="time">11/28/2019, 4:58:39 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
       ←
-      <a href="/wzp.github.io/pages/folder1/test1.html" class="prev">子菜单1</a></span> <span class="next"><a href="/wzp.github.io/pages/folder1/test2.html">子菜单1</a>
+      <a href="/wzp.github.io/pages/folder1/test1.html" class="prev">前端开发笔记</a></span> <span class="next"><a href="/wzp.github.io/pages/folder1/test2.html">vuepress+github搭建博客教程</a>
       →
     </span></p></div> </main></div><div class="global-ui"></div></div>
-    <script src="/wzp.github.io/assets/js/app.5f30b3b7.js" defer></script><script src="/wzp.github.io/assets/js/2.426bab4a.js" defer></script><script src="/wzp.github.io/assets/js/10.d597df0e.js" defer></script>
+    <script src="/wzp.github.io/assets/js/app.02196188.js" defer></script><script src="/wzp.github.io/assets/js/2.426bab4a.js" defer></script><script src="/wzp.github.io/assets/js/10.0ba8c131.js" defer></script>
   </body>
 </html>

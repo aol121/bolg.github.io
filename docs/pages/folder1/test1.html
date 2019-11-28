@@ -3,85 +3,752 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>关于Vue下组件引入第三方外部外链Js几种方式 | 辰砂首页</title>
+    <title>前端开发笔记 | 辰砂首页</title>
     <meta name="description" content="辰砂的前端记录">
-    <link rel="icon" href="/wzp.github.io/egg.png">
+    <link rel="icon" href="/wzp.github.io/logo.png">
   <script type="text/javascript" src="/wzp.github.io/live2dModels/live2d/js/live2d.js"></script>
   <script type="text/javascript" async="async" src="/wzp.github.io/live2dModels/live2d/js/init.js"></script>
     
-    <link rel="preload" href="/wzp.github.io/assets/css/0.styles.8e2e378d.css" as="style"><link rel="preload" href="/wzp.github.io/assets/js/app.5f30b3b7.js" as="script"><link rel="preload" href="/wzp.github.io/assets/js/2.426bab4a.js" as="script"><link rel="preload" href="/wzp.github.io/assets/js/8.35e9a7cf.js" as="script"><link rel="prefetch" href="/wzp.github.io/assets/js/10.d597df0e.js"><link rel="prefetch" href="/wzp.github.io/assets/js/11.29dedd01.js"><link rel="prefetch" href="/wzp.github.io/assets/js/12.f15bad86.js"><link rel="prefetch" href="/wzp.github.io/assets/js/13.a343ed23.js"><link rel="prefetch" href="/wzp.github.io/assets/js/3.d6f4e7a9.js"><link rel="prefetch" href="/wzp.github.io/assets/js/4.f8fd328f.js"><link rel="prefetch" href="/wzp.github.io/assets/js/5.76a55a5c.js"><link rel="prefetch" href="/wzp.github.io/assets/js/6.f6826849.js"><link rel="prefetch" href="/wzp.github.io/assets/js/7.dc0614d4.js"><link rel="prefetch" href="/wzp.github.io/assets/js/9.2899819d.js">
+    <link rel="preload" href="/wzp.github.io/assets/css/0.styles.8e2e378d.css" as="style"><link rel="preload" href="/wzp.github.io/assets/js/app.02196188.js" as="script"><link rel="preload" href="/wzp.github.io/assets/js/2.426bab4a.js" as="script"><link rel="preload" href="/wzp.github.io/assets/js/8.e363f5d8.js" as="script"><link rel="prefetch" href="/wzp.github.io/assets/js/10.0ba8c131.js"><link rel="prefetch" href="/wzp.github.io/assets/js/11.29dedd01.js"><link rel="prefetch" href="/wzp.github.io/assets/js/12.f15bad86.js"><link rel="prefetch" href="/wzp.github.io/assets/js/13.a343ed23.js"><link rel="prefetch" href="/wzp.github.io/assets/js/3.d6f4e7a9.js"><link rel="prefetch" href="/wzp.github.io/assets/js/4.f8fd328f.js"><link rel="prefetch" href="/wzp.github.io/assets/js/5.76a55a5c.js"><link rel="prefetch" href="/wzp.github.io/assets/js/6.f6826849.js"><link rel="prefetch" href="/wzp.github.io/assets/js/7.910423a9.js"><link rel="prefetch" href="/wzp.github.io/assets/js/9.3d366006.js">
     <link rel="stylesheet" href="/wzp.github.io/assets/css/0.styles.8e2e378d.css">
   </head>
   <body>
-    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/wzp.github.io/" class="home-link router-link-active"><img src="/wzp.github.io/egg.png" alt="辰砂首页" class="logo"> <span class="site-name can-hide">辰砂首页</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/wzp.github.io/" class="nav-link">首页</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="分类" class="dropdown-title"><span class="title">分类</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/wzp.github.io/pages/folder1/test1.html" class="nav-link router-link-exact-active router-link-active">文章</a></li><li class="dropdown-item"><!----> <a href="/wzp.github.io/pages/folder2/test4.html" class="nav-link">琐碎</a></li></ul></div></div><div class="nav-item"><a href="/wzp.github.io/pages/folder1/test3.html" class="nav-link">功能演示</a></div><div class="nav-item"><a href="https://github.com/aol121/wzp.github.io" target="_blank" rel="noopener noreferrer" class="nav-link external">
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/wzp.github.io/" class="home-link router-link-active"><img src="/wzp.github.io/logo.png" alt="辰砂首页" class="logo"> <span class="site-name can-hide">辰砂首页</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/wzp.github.io/" class="nav-link">首页</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="分类" class="dropdown-title"><span class="title">分类</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/wzp.github.io/pages/folder1/test1.html" class="nav-link router-link-exact-active router-link-active">文章</a></li><li class="dropdown-item"><!----> <a href="/wzp.github.io/pages/folder2/test4.html" class="nav-link">琐碎</a></li></ul></div></div><div class="nav-item"><a href="/wzp.github.io/pages/folder1/test3.html" class="nav-link">功能演示</a></div><div class="nav-item"><a href="https://github.com/aol121/wzp.github.io" target="_blank" rel="noopener noreferrer" class="nav-link external">
   Github
   <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/wzp.github.io/" class="nav-link">首页</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="分类" class="dropdown-title"><span class="title">分类</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/wzp.github.io/pages/folder1/test1.html" class="nav-link router-link-exact-active router-link-active">文章</a></li><li class="dropdown-item"><!----> <a href="/wzp.github.io/pages/folder2/test4.html" class="nav-link">琐碎</a></li></ul></div></div><div class="nav-item"><a href="/wzp.github.io/pages/folder1/test3.html" class="nav-link">功能演示</a></div><div class="nav-item"><a href="https://github.com/aol121/wzp.github.io" target="_blank" rel="noopener noreferrer" class="nav-link external">
   Github
-  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>测试菜单1</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/wzp.github.io/pages/folder1/test1.html" class="active sidebar-link">子菜单1</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/wzp.github.io/pages/folder1/test1.html#关于vue下组件引入第三方外部外链js几种方式" class="sidebar-link">关于Vue下组件引入第三方外部外链Js几种方式</a></li><li class="sidebar-sub-header"><a href="/wzp.github.io/pages/folder1/test1.html#nginx一键配置" class="sidebar-link">nginx一键配置</a></li><li class="sidebar-sub-header"><a href="/wzp.github.io/pages/folder1/test1.html#lodash按需加载" class="sidebar-link">lodash按需加载</a></li><li class="sidebar-sub-header"><a href="/wzp.github.io/pages/folder1/test1.html#threejs" class="sidebar-link">threeJs</a></li></ul></li><li><a href="/wzp.github.io/pages/folder1/test3.html" class="sidebar-link">子菜单2</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>测试菜单2</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/wzp.github.io/pages/folder1/test2.html" class="sidebar-link">子菜单1</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="关于vue下组件引入第三方外部外链js几种方式"><a href="#关于vue下组件引入第三方外部外链js几种方式" class="header-anchor">#</a> 关于Vue下组件引入第三方外部外链Js几种方式</h2> <p>https://blog.csdn.net/u010881899/article/details/80895661</p> <h2 id="nginx一键配置"><a href="#nginx一键配置" class="header-anchor">#</a> nginx一键配置</h2> <p>https://nginxconfig.io/</p> <p><img src="/egg.png" alt=""></p> <h2 id="lodash按需加载"><a href="#lodash按需加载" class="header-anchor">#</a> lodash按需加载</h2> <p>https://www.jianshu.com/p/f03ff4f3a8b3</p> <h2 id="threejs"><a href="#threejs" class="header-anchor">#</a> threeJs</h2> <h4 id="中文教程"><a href="#中文教程" class="header-anchor">#</a> 中文教程</h4> <div class="custom-block warning"><p class="custom-block-title">WARNING</p> <p>This is a warning</p></div> <div class="language-js line-numbers-mode"><pre class="language-js"><code>
-<span class="token comment">/**
- * Promise 实现 遵循promise/A+规范
- * Promise/A+规范译文:
- * https://malcolmyu.github.io/2015/06/12/Promises-A-Plus/#note-4
- */</span>
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>开发笔记</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/wzp.github.io/pages/folder1/test1.html" class="active sidebar-link">前端开发笔记</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/wzp.github.io/pages/folder1/test1.html#简写console-log" class="sidebar-link">简写console.log()</a></li><li class="sidebar-sub-header"><a href="/wzp.github.io/pages/folder1/test1.html#css视口单位" class="sidebar-link">CSS视口单位</a></li><li class="sidebar-sub-header"><a href="/wzp.github.io/pages/folder1/test1.html#css异形切割（clip-path）" class="sidebar-link">CSS异形切割（clip-path）</a></li><li class="sidebar-sub-header"><a href="/wzp.github.io/pages/folder1/test1.html#滚动条样式" class="sidebar-link">滚动条样式</a></li><li class="sidebar-sub-header"><a href="/wzp.github.io/pages/folder1/test1.html#字符串截取函数slice-substring-substr" class="sidebar-link">字符串截取函数slice, substring, substr</a></li><li class="sidebar-sub-header"><a href="/wzp.github.io/pages/folder1/test1.html#文字显示若干行超出部分用省略号表示" class="sidebar-link">文字显示若干行超出部分用省略号表示</a></li><li class="sidebar-sub-header"><a href="/wzp.github.io/pages/folder1/test1.html#判断是否为移动端-正则表达式" class="sidebar-link">判断是否为移动端==正则表达式;</a></li><li class="sidebar-sub-header"><a href="/wzp.github.io/pages/folder1/test1.html#中断each-遍历" class="sidebar-link">中断each 遍历</a></li><li class="sidebar-sub-header"><a href="/wzp.github.io/pages/folder1/test1.html#jq判断所点击的是哪个子盒子" class="sidebar-link">JQ判断所点击的是哪个子盒子</a></li><li class="sidebar-sub-header"><a href="/wzp.github.io/pages/folder1/test1.html#jq将盒子自动滚动至底部（仿qq聊天界面）" class="sidebar-link">JQ将盒子自动滚动至底部（仿QQ聊天界面）</a></li><li class="sidebar-sub-header"><a href="/wzp.github.io/pages/folder1/test1.html#获取该标签除子标签以外的文本" class="sidebar-link">获取该标签除子标签以外的文本</a></li><li class="sidebar-sub-header"><a href="/wzp.github.io/pages/folder1/test1.html#格林时间：thu-may-18-2017-00-00-00-gmt-0800-中国标准时间-格式转换" class="sidebar-link">格林时间：Thu May 18 2017 00:00:00 GMT+0800 (中国标准时间) 格式转换</a></li><li class="sidebar-sub-header"><a href="/wzp.github.io/pages/folder1/test1.html#隐藏手机号中间四位数为“”" class="sidebar-link">隐藏手机号中间四位数为“”</a></li><li class="sidebar-sub-header"><a href="/wzp.github.io/pages/folder1/test1.html#深度克隆复杂类型" class="sidebar-link">深度克隆复杂类型</a></li><li class="sidebar-sub-header"><a href="/wzp.github.io/pages/folder1/test1.html#数字添加千位分隔符" class="sidebar-link">数字添加千位分隔符</a></li><li class="sidebar-sub-header"><a href="/wzp.github.io/pages/folder1/test1.html#时间格式化" class="sidebar-link">时间格式化</a></li><li class="sidebar-sub-header"><a href="/wzp.github.io/pages/folder1/test1.html#git一些操作" class="sidebar-link">GIT一些操作</a></li><li class="sidebar-sub-header"><a href="/wzp.github.io/pages/folder1/test1.html#移动端开发，去掉手机右侧滚动条" class="sidebar-link">移动端开发，去掉手机右侧滚动条</a></li><li class="sidebar-sub-header"><a href="/wzp.github.io/pages/folder1/test1.html#多页面-html-引入多个文件（js-css）" class="sidebar-link">多页面(html)引入多个文件（js,css）</a></li><li class="sidebar-sub-header"><a href="/wzp.github.io/pages/folder1/test1.html#浏览器长按保存opacity-0的最上层图片要保证要保存图片的z-index：10（足够高）" class="sidebar-link">浏览器长按保存opacity=0的最上层图片要保证要保存图片的z-index：10（足够高）</a></li><li class="sidebar-sub-header"><a href="/wzp.github.io/pages/folder1/test1.html#html转img" class="sidebar-link">html转img</a></li><li class="sidebar-sub-header"><a href="/wzp.github.io/pages/folder1/test1.html#h5-中video标签" class="sidebar-link">H5 中video标签</a></li><li class="sidebar-sub-header"><a href="/wzp.github.io/pages/folder1/test1.html#当前页面监听当前页面storage变化" class="sidebar-link">当前页面监听当前页面storage变化</a></li><li class="sidebar-sub-header"><a href="/wzp.github.io/pages/folder1/test1.html#h5弹幕" class="sidebar-link">H5弹幕</a></li><li class="sidebar-sub-header"><a href="/wzp.github.io/pages/folder1/test1.html#静止用户选择，微信浏览器禁止长按弹出保存图片弹窗" class="sidebar-link">静止用户选择，微信浏览器禁止长按弹出保存图片弹窗</a></li><li class="sidebar-sub-header"><a href="/wzp.github.io/pages/folder1/test1.html#微信浏览器中自动播放音频" class="sidebar-link">微信浏览器中自动播放音频</a></li><li class="sidebar-sub-header"><a href="/wzp.github.io/pages/folder1/test1.html#文字loading-三个点动画" class="sidebar-link">文字Loading...三个点动画</a></li><li class="sidebar-sub-header"><a href="/wzp.github.io/pages/folder1/test1.html#有样式的console-log（）" class="sidebar-link">有样式的console.log（）</a></li><li class="sidebar-sub-header"><a href="/wzp.github.io/pages/folder1/test1.html#git本地仓库与远程仓库关联" class="sidebar-link">git本地仓库与远程仓库关联</a></li><li class="sidebar-sub-header"><a href="/wzp.github.io/pages/folder1/test1.html#js浮点数精确运算" class="sidebar-link">JS浮点数精确运算</a></li></ul></li><li><a href="/wzp.github.io/pages/folder1/test3.html" class="sidebar-link">vue笔记</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>杂七杂八</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/wzp.github.io/pages/folder1/test2.html" class="sidebar-link">vuepress+github搭建博客教程</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="前端开发笔记"><a href="#前端开发笔记" class="header-anchor">#</a> 前端开发笔记</h1> <p><a name="e1sqpg"></a></p> <h2 id="简写console-log"><a href="#简写console-log" class="header-anchor">#</a> 简写console.log()</h2> <blockquote><p>每次写JS 开局就在 顶部  var log = console.log;<br>ES6写法  let log = ::console.log<br>然后每次输出就直接   log(XXX)  就可以打印了~  不需要  xxx.log  或者 有的编辑器需要写 console.log</p></blockquote> <p><a name="zhvGu"></a></p> <h2 id="css视口单位"><a href="#css视口单位" class="header-anchor">#</a> CSS视口单位</h2> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code>vw <span class="token punctuation">:</span> <span class="token number">1</span>vw 等于视口宽度的<span class="token number">1</span><span class="token operator">%</span>
+vh <span class="token punctuation">:</span> <span class="token number">1</span>vh 等于视口高度的<span class="token number">1</span><span class="token operator">%</span>
+vmin <span class="token punctuation">:</span> 选取 vw 和 vh 中最小的那个
+vmax <span class="token punctuation">:</span> 选取 vw 和 vh 中最大的那个
 
-<span class="token comment">// promise 三个状态</span>
-<span class="token keyword">const</span> <span class="token constant">PENDING</span> <span class="token operator">=</span> <span class="token string">&quot;pending&quot;</span><span class="token punctuation">;</span>
-<span class="token keyword">const</span> <span class="token constant">FULFILLED</span> <span class="token operator">=</span> <span class="token string">&quot;fulfilled&quot;</span><span class="token punctuation">;</span>
-<span class="token keyword">const</span> <span class="token constant">REJECTED</span> <span class="token operator">=</span> <span class="token string">&quot;rejected&quot;</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p><a name="bkfXd"></a></p> <h2 id="css异形切割（clip-path）"><a href="#css异形切割（clip-path）" class="header-anchor">#</a> CSS异形切割（clip-path）</h2> <p>参考网站：<a href="https://www.cnblogs.com/xiaohuochai/p/7509225.html" target="_blank" rel="noopener noreferrer">https://www.cnblogs.com/xiaohuochai/p/7509225.html<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code>【clip<span class="token operator">-</span>path】
 
-<span class="token keyword">function</span> <span class="token function">Promise</span><span class="token punctuation">(</span><span class="token parameter">excutor</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">let</span> that <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span> <span class="token comment">// 缓存当前promise实例对象</span>
-    that<span class="token punctuation">.</span>status <span class="token operator">=</span> <span class="token constant">PENDING</span><span class="token punctuation">;</span> <span class="token comment">// 初始状态</span>
-    that<span class="token punctuation">.</span>value <span class="token operator">=</span> <span class="token keyword">undefined</span><span class="token punctuation">;</span> <span class="token comment">// fulfilled状态时 返回的信息</span>
-    that<span class="token punctuation">.</span>reason <span class="token operator">=</span> <span class="token keyword">undefined</span><span class="token punctuation">;</span> <span class="token comment">// rejected状态时 拒绝的原因</span>
-    that<span class="token punctuation">.</span>onFulfilledCallbacks <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">// 存储fulfilled状态对应的onFulfilled函数</span>
-    that<span class="token punctuation">.</span>onRejectedCallbacks <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">// 存储rejected状态对应的onRejected函数</span>
+　　值<span class="token punctuation">:</span> <span class="token operator">&lt;</span>clip<span class="token operator">-</span>source<span class="token operator">&gt;</span> <span class="token operator">|</span> <span class="token punctuation">[</span> <span class="token operator">&lt;</span>basic<span class="token operator">-</span>shape<span class="token operator">&gt;</span> <span class="token operator">||</span> <span class="token operator">&lt;</span>geometry<span class="token operator">-</span>box<span class="token operator">&gt;</span> <span class="token punctuation">]</span> <span class="token operator">|</span> none
 
-    <span class="token keyword">function</span> <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token parameter">value</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">// value成功态时接收的终值</span>
-        <span class="token keyword">if</span><span class="token punctuation">(</span>value <span class="token keyword">instanceof</span> <span class="token class-name">Promise</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token keyword">return</span> value<span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>resolve<span class="token punctuation">,</span> reject<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
+　　<span class="token operator">&lt;</span>clip<span class="token operator">-</span>source<span class="token operator">&gt;</span><span class="token punctuation">:</span> <span class="token function">url</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 
-        <span class="token comment">// 为什么resolve 加setTimeout?</span>
-        <span class="token comment">// 2.2.4规范 onFulfilled 和 onRejected 只允许在 execution context 栈仅包含平台代码时运行.</span>
+　　<span class="token operator">&lt;</span>basic<span class="token operator">-</span>shape<span class="token operator">&gt;</span><span class="token punctuation">:</span>  <span class="token function">inset</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">|</span> <span class="token function">circle</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">|</span> <span class="token function">ellipse</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">|</span> <span class="token function">polygon</span><span class="token punctuation">(</span><span class="token punctuation">)</span> 
 
-        <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
-            <span class="token comment">// 调用resolve 回调对应onFulfilled函数</span>
-            <span class="token keyword">if</span> <span class="token punctuation">(</span>that<span class="token punctuation">.</span>status <span class="token operator">===</span> <span class="token constant">PENDING</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                <span class="token comment">// 只能由pending状态 =&gt; fulfilled状态 (避免调用多次resolve reject)</span>
-                that<span class="token punctuation">.</span>status <span class="token operator">=</span> <span class="token constant">FULFILLED</span><span class="token punctuation">;</span>
-                that<span class="token punctuation">.</span>value <span class="token operator">=</span> value<span class="token punctuation">;</span>
-                that<span class="token punctuation">.</span>onFulfilledCallbacks<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token parameter">cb</span> <span class="token operator">=&gt;</span> <span class="token function">cb</span><span class="token punctuation">(</span>that<span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
+　　<span class="token operator">&lt;</span>geometry<span class="token operator">-</span>box<span class="token operator">&gt;</span><span class="token punctuation">:</span> fill<span class="token operator">-</span>box <span class="token operator">|</span> stroke<span class="token operator">-</span>box <span class="token operator">|</span> view<span class="token operator">-</span>box <span class="token operator">|</span> margin<span class="token operator">-</span>box <span class="token operator">|</span> border<span class="token operator">-</span>box <span class="token operator">|</span> padding<span class="token operator">-</span>box <span class="token operator">|</span> content<span class="token operator">-</span>box 
 
-    <span class="token keyword">function</span> <span class="token function">reject</span><span class="token punctuation">(</span><span class="token parameter">reason</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">// reason失败态时接收的拒因</span>
-        <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
-            <span class="token comment">// 调用reject 回调对应onRejected函数</span>
-            <span class="token keyword">if</span> <span class="token punctuation">(</span>that<span class="token punctuation">.</span>status <span class="token operator">===</span> <span class="token constant">PENDING</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                <span class="token comment">// 只能由pending状态 =&gt; rejected状态 (避免调用多次resolve reject)</span>
-                that<span class="token punctuation">.</span>status <span class="token operator">=</span> <span class="token constant">REJECTED</span><span class="token punctuation">;</span>
-                that<span class="token punctuation">.</span>reason <span class="token operator">=</span> reason<span class="token punctuation">;</span>
-                that<span class="token punctuation">.</span>onRejectedCallbacks<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token parameter">cb</span> <span class="token operator">=&gt;</span> <span class="token function">cb</span><span class="token punctuation">(</span>that<span class="token punctuation">.</span>reason<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
+　　初始值<span class="token punctuation">:</span> none
 
-    <span class="token comment">// 捕获在excutor执行器中抛出的异常</span>
-    <span class="token comment">// new Promise((resolve, reject) =&gt; {</span>
-    <span class="token comment">//     throw new Error('error in excutor')</span>
-    <span class="token comment">// })</span>
-    <span class="token keyword">try</span> <span class="token punctuation">{</span>
-        <span class="token function">excutor</span><span class="token punctuation">(</span>resolve<span class="token punctuation">,</span> reject<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token function">reject</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
+　　应用于<span class="token punctuation">:</span> 所有元素
+
+　　继承性<span class="token punctuation">:</span> 无
+  
+【圆形裁剪】 clip<span class="token operator">-</span>path<span class="token punctuation">:</span> <span class="token function">circle</span><span class="token punctuation">(</span><span class="token number">50</span><span class="token operator">%</span> at <span class="token number">50</span><span class="token operator">%</span> <span class="token number">50</span><span class="token operator">%</span><span class="token punctuation">)</span>
+【椭圆裁剪】 clip<span class="token operator">-</span>path<span class="token punctuation">:</span> <span class="token function">ellipse</span><span class="token punctuation">(</span><span class="token number">25</span><span class="token operator">%</span> <span class="token number">40</span><span class="token operator">%</span> at <span class="token number">50</span><span class="token operator">%</span> <span class="token number">50</span><span class="token operator">%</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+【矩形裁剪】 clip<span class="token operator">-</span>path<span class="token punctuation">:</span> <span class="token function">inset</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token operator">%</span> <span class="token number">20</span><span class="token operator">%</span> <span class="token number">15</span><span class="token operator">%</span> <span class="token number">10</span><span class="token operator">%</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+【三角形】   clip<span class="token operator">-</span>path<span class="token punctuation">:</span> <span class="token function">polygon</span><span class="token punctuation">(</span><span class="token number">50</span><span class="token operator">%</span> <span class="token number">0</span><span class="token operator">%</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token operator">%</span> <span class="token number">100</span><span class="token operator">%</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token operator">%</span> <span class="token number">100</span><span class="token operator">%</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+【斜角】     clip<span class="token operator">-</span>path<span class="token punctuation">:</span> <span class="token function">polygon</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token operator">%</span> <span class="token number">0</span><span class="token operator">%</span><span class="token punctuation">,</span> <span class="token number">80</span><span class="token operator">%</span> <span class="token number">0</span><span class="token operator">%</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token operator">%</span> <span class="token number">20</span><span class="token operator">%</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token operator">%</span> <span class="token number">80</span><span class="token operator">%</span><span class="token punctuation">,</span> <span class="token number">80</span><span class="token operator">%</span> <span class="token number">100</span><span class="token operator">%</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token operator">%</span> <span class="token number">100</span><span class="token operator">%</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token operator">%</span> <span class="token number">80</span><span class="token operator">%</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token operator">%</span> <span class="token number">20</span><span class="token operator">%</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+变形
+<span class="token punctuation">.</span>outer<span class="token punctuation">{</span>
+  width<span class="token punctuation">:</span><span class="token number">100</span>px<span class="token punctuation">;</span>
+  height<span class="token punctuation">:</span> <span class="token number">100</span>px<span class="token punctuation">;</span>
+  background<span class="token punctuation">:</span>orange<span class="token punctuation">;</span>
+  clip<span class="token operator">-</span>path<span class="token punctuation">:</span> <span class="token function">polygon</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token operator">%</span> <span class="token number">0</span><span class="token operator">%</span><span class="token punctuation">,</span> <span class="token number">80</span><span class="token operator">%</span> <span class="token number">0</span><span class="token operator">%</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token operator">%</span> <span class="token number">20</span><span class="token operator">%</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token operator">%</span> <span class="token number">80</span><span class="token operator">%</span><span class="token punctuation">,</span> <span class="token number">80</span><span class="token operator">%</span> <span class="token number">100</span><span class="token operator">%</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token operator">%</span> <span class="token number">100</span><span class="token operator">%</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token operator">%</span> <span class="token number">80</span><span class="token operator">%</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token operator">%</span> <span class="token number">20</span><span class="token operator">%</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  transition<span class="token punctuation">:</span><span class="token number">.5</span>s clip<span class="token operator">-</span>path<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>  
+<span class="token punctuation">.</span>outer<span class="token punctuation">:</span>hover<span class="token punctuation">{</span>
+  clip<span class="token operator">-</span>path<span class="token punctuation">:</span><span class="token function">polygon</span><span class="token punctuation">(</span><span class="token number">0</span> <span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span> <span class="token number">0</span><span class="token punctuation">,</span><span class="token number">100</span><span class="token operator">%</span> <span class="token number">0</span><span class="token punctuation">,</span><span class="token number">100</span><span class="token operator">%</span> <span class="token number">0</span><span class="token punctuation">,</span><span class="token number">100</span><span class="token operator">%</span> <span class="token number">100</span><span class="token operator">%</span><span class="token punctuation">,</span><span class="token number">100</span><span class="token operator">%</span> <span class="token number">100</span><span class="token operator">%</span><span class="token punctuation">,</span><span class="token number">0</span> <span class="token number">100</span><span class="token operator">%</span><span class="token punctuation">,</span><span class="token number">0</span> <span class="token number">100</span><span class="token operator">%</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;outer&quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br></div></div><p><a name="bRx6h"></a></p> <h2 id="滚动条样式"><a href="#滚动条样式" class="header-anchor">#</a> 滚动条样式</h2> <div class="language-css line-numbers-mode"><pre class="language-css"><code><span class="token comment">/*滚动条样式*/</span>
+
+<span class="token selector">::-webkit-scrollbar</span> <span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 8px<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 8px<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 
-</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br></div></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/wzp.github.io/pages/folder1/test3.html">子菜单2</a>
+<span class="token selector">::-webkit-scrollbar-track</span> <span class="token punctuation">{</span>
+  <span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">rgba</span><span class="token punctuation">(</span>84<span class="token punctuation">,</span> 92<span class="token punctuation">,</span> 100<span class="token punctuation">,</span> 0<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">border-radius</span><span class="token punctuation">:</span> 5px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">::-webkit-scrollbar-thumb</span> <span class="token punctuation">{</span>
+  <span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">rgba</span><span class="token punctuation">(</span>84<span class="token punctuation">,</span> 92<span class="token punctuation">,</span> 100<span class="token punctuation">,</span> 0.7<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">border-radius</span><span class="token punctuation">:</span> 5px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">::-webkit-scrollbar-thumb:hover</span> <span class="token punctuation">{</span>
+  <span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">rgba</span><span class="token punctuation">(</span>84<span class="token punctuation">,</span> 92<span class="token punctuation">,</span> 100<span class="token punctuation">,</span> 0.9<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">::-moz-scrollbar</span> <span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 8px<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 8px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">::-moz-scrollbar-track</span> <span class="token punctuation">{</span>
+  <span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">rgba</span><span class="token punctuation">(</span>84<span class="token punctuation">,</span> 92<span class="token punctuation">,</span> 100<span class="token punctuation">,</span> 0<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">border-radius</span><span class="token punctuation">:</span> 5px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">::-moz-scrollbar-thumb</span> <span class="token punctuation">{</span>
+  <span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">rgba</span><span class="token punctuation">(</span>84<span class="token punctuation">,</span> 92<span class="token punctuation">,</span> 100<span class="token punctuation">,</span> 0.7<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">border-radius</span><span class="token punctuation">:</span> 5px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">::-moz-scrollbar-thumb:hover</span> <span class="token punctuation">{</span>
+  <span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">rgba</span><span class="token punctuation">(</span>84<span class="token punctuation">,</span> 92<span class="token punctuation">,</span> 100<span class="token punctuation">,</span> 0.9<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br></div></div><p><a name="ixyvxo"></a></p> <h2 id="字符串截取函数slice-substring-substr"><a href="#字符串截取函数slice-substring-substr" class="header-anchor">#</a> 字符串截取函数slice, substring, substr</h2> <p><a name="gg32hs"></a></p> <h4 id="str-slice-start-end"><a href="#str-slice-start-end" class="header-anchor">#</a> str.slice(start, end)</h4> <p>slice的参数start和end可接受任意非NaN数值的参数，取start到end之间的字符，不包含end。如果参数为负，则会自动加上str.length进行纠正，如果依然为负值，则修正为0。如果end值小于start则返回空字符串。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>console.log(&quot;abcdefghij&quot;.slice(3,1))            //      ''
+console.log(&quot;abcdefghij&quot;.slice(-3,-1))          //     'hi'
+console.log(&quot;abcdefghij&quot;.slice(1, 3))           //     'bc'
+console.log(&quot;abcdefghij&quot;.slice(-20, -8))        //     'ab'
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>记住一个原则：如果end小于start，则返回空字符串。如果值为负数，加str.length纠正，依然为负，则调整为0。</p> <p><a name="9c1gsp"></a></p> <h4 id="str-substring-start-end"><a href="#str-substring-start-end" class="header-anchor">#</a> str.substring(start, end)</h4> <p>也是接受任意数值的参数，如果参数为0或者NaN的话，会自动修正为0；如果end小于start的话，两者位置颠倒。取start到end之间的字符，不包含end。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>console.log(&quot;abcdefghij&quot;.substring(3,1))            //     'bc'
+console.log(&quot;abcdefghij&quot;.substring(-3,-1))          //     ''
+console.log(&quot;abcdefghij&quot;.substring(1, 3))           //     'bc'
+console.log(&quot;abcdefghij&quot;.substring(-20, -8)) 　　　　//　　　''
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>也有一个原则：就是两个参数当中较小的会自动调整当做start参数，任何非正整数，都会当做0处理。</p> <p><a name="mcb9gi"></a></p> <h4 id="str-substr-start-length"><a href="#str-substr-start-length" class="header-anchor">#</a> str.substr(start, length)</h4> <p>从形参名称应该可以看出一点不同。substr第一个参数也是起始位置，但是第二个参数不是结束位置，而是需要截取多少个字符串。<br>start如果为负数，则与slice传入负数参数一样处理，让其自身加str.length进行纠正，如果还小于0，则当做0处理。　　<br>length如果为0或者负数，则直接返回一个空字符串。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>console.log(&quot;abcdefghij&quot;.substr(-13))            //  'abcdefghij'
+console.log(&quot;abcdefghij&quot;.substr(-13, 1))         //  'a'
+console.log(&quot;abcdefghij&quot;.substr(0, -1))          //  ''
+console.log(&quot;abcdefghij&quot;.substr(-1, 3))          //  'j'
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p><a name="oiirua"></a></p> <h2 id="文字显示若干行超出部分用省略号表示"><a href="#文字显示若干行超出部分用省略号表示" class="header-anchor">#</a> 文字显示若干行超出部分用省略号表示</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>.recommend-goods li&gt;a&gt;p:first-child{
+        /*display: inline-block;*/
+        cursor:pointer;
+        color:#86c9a6;
+        width:100%;
+        word-break:keep-all;/* 不换行 */
+        white-space:nowrap;/* 不换行 */
+        overflow:hidden;/* 内容超出宽度时隐藏超出部分的内容 */
+        text-overflow:ellipsis;/* 当对象内文本溢出时显示省略标记(...) ；需与overflow:hidden;一起使用。*/
+    }
+
+ .comment_inner{
+    width: 200px;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    display: -webkit-box; /** 对象作为伸缩盒子模型显示 **/
+    -webkit-box-orient: vertical; /** 设置或检索伸缩盒对象的子元素的排列方式 **/
+    -webkit-line-clamp: 3; /** 显示的行数 **/
+    overflow: hidden;  /** 隐藏超出的内容 **/
+    }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><p><a name="mo12vi"></a></p> <h2 id="判断是否为移动端-正则表达式"><a href="#判断是否为移动端-正则表达式" class="header-anchor">#</a> 判断是否为移动端==正则表达式;</h2> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token keyword">const</span> isMobile <span class="token operator">=</span> <span class="token regex">/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i</span><span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span>navigator<span class="token punctuation">.</span>userAgent<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p><a name="hh2apg"></a></p> <h2 id="中断each-遍历"><a href="#中断each-遍历" class="header-anchor">#</a> 中断each 遍历</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>try{
+    for(var i=0;i&lt;10;i++){
+        if(i===4){
+            ...
+            throw new Error(&quot;错误&quot;)
+        }
+    }    
+}catch(err){
+  document.writeln(&quot;Error name: &quot; + err.name)
+　document.writeln(&quot;Error message: &quot; + err.message)
+}finally{
+
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><p><a name="spgztz"></a></p> <h2 id="jq判断所点击的是哪个子盒子"><a href="#jq判断所点击的是哪个子盒子" class="header-anchor">#</a> JQ判断所点击的是哪个子盒子</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>//html
+     &lt;li class=&quot;mui-table-view-cell&quot;&gt;
+
+         &lt;span class=&quot;iconfont icon-chuyidong1&quot;&gt;&lt;/span&gt;
+
+         &lt;a href=&quot;./order-delail-myOrder.html?id={{wxVisitRecord.id}}&amp;type=wx&quot;&gt;
+           &lt;p&gt;{{wxVisitRecord.appointmentTime}}&lt;/p&gt;
+           &lt;p&gt;就诊人：....&lt;/p&gt;
+           &lt;p&gt;预约医生：....&lt;/p&gt;
+
+         &lt;/a&gt;
+       &lt;/li&gt;
+
+//js
+    $(&quot;ul&quot;).on(&quot;tap&quot;,&quot;li&gt;*&quot;,function(){
+            flag= false;
+            if(($(this)[0].tagName)===&quot;SPAN&quot;){//判断子元素tagName--标签名
+                mui.confirm(&quot;确认取消当前预约？&quot;,&quot;提示&quot;,[&quot;确定&quot;,&quot;取消&quot;],function(){
+                    //
+                },&quot;div&quot;)
+            }else{
+                document.location.href = this.href;
+            }
+        })
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br></div></div><p><a name="zfiptd"></a></p> <h2 id="jq将盒子自动滚动至底部（仿qq聊天界面）"><a href="#jq将盒子自动滚动至底部（仿qq聊天界面）" class="header-anchor">#</a> JQ将盒子自动滚动至底部（仿QQ聊天界面）</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>//html
+     &lt;ul class=&quot;list-group dialogue&quot;&gt;
+          &lt;li class=&quot;list-group-item customer&quot;&gt;
+              &lt;div class=&quot;time&quot;&gt;
+                  &lt;span&gt;***&lt;/span&gt;&amp;nbsp;
+                  &lt;span&gt;2017年9月2日&lt;/span&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;head-icon&quot;&gt;
+
+              &lt;/div&gt;
+              &lt;div class=&quot;dialogue-content&quot;&gt;
+                  医生您好！医生您好！医生您好！医生您好！医生您好！医生您好！医生您好！医生您好！
+              &lt;/div&gt;
+
+          &lt;/li&gt;
+          &lt;li class=&quot;list-group-item server clearfix&quot;&gt;
+              &lt;div class=&quot;time&quot;&gt;
+                  &lt;span&gt;张医生&lt;/span&gt;&amp;nbsp;
+                  &lt;span&gt;2017年9月2日&lt;/span&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;head-icon&quot;&gt;
+
+              &lt;/div&gt;
+              &lt;div class=&quot;dialogue-content&quot;&gt;
+                  医生您好！医生您好！医生您好！医生您好！医生您好！
+              &lt;/div&gt;
+
+          &lt;/li&gt;
+
+      &lt;/ul&gt;
+
+//js
+
+    $(&quot;.sub_btn&quot;).click(function(){
+        var str = $(&quot;#saytext&quot;).val();
+        $(&quot;#saytext&quot;).val(&quot;&quot;)
+        if(str){
+            var html ='&lt;li class=&quot;list-group-item server clearfix&quot;&gt;' +
+                '&lt;div class=&quot;time&quot;&gt;' +
+                '&lt;span&gt;张医生&lt;/span&gt;&amp;nbsp;'+
+                '&lt;span&gt;2017年9月2日&lt;/span&gt;'+
+                '&lt;/div&gt;'+
+                '&lt;div class=&quot;head-icon&quot;&gt;'+
+                '&lt;/div&gt;'+
+                '&lt;div class=&quot;dialogue-content&quot;&gt;'+
+                replace_em(str)
+                +'&lt;/div&gt;'+
+
+                '&lt;/li&gt;'
+            $(&quot;.dialogue&quot;).append(html);
+            //alert($(&quot;.dialogue&quot;).height())
+            scrollToBottom()
+        }else {
+            common.showMessage('请输入回复信息！',&quot;warning&quot;);
+        }
+    });
+
+    //聊天框自动滚动到底部
+    function scrollToBottom(){
+        var li_height = 0;
+        $(&quot;.dialogue li&quot;).each(function(i,e){
+            //.outerHeight() 获取盒子的包括；margin+padding+border+height  的总和
+            //.height() 仅获取高度height
+            li_height += $(e).outerHeight();
+
+        })
+
+        var h = li_height - $(&quot;.dialogue&quot;).height();
+        if(h&gt;0){
+
+            $(&quot;.dialogue&quot;).animate({&quot;scrollTop&quot;:h},150);
+        }
+    }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br></div></div><p><a name="xci4my"></a></p> <h2 id="获取该标签除子标签以外的文本"><a href="#获取该标签除子标签以外的文本" class="header-anchor">#</a> 获取该标签除子标签以外的文本</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;p&gt;
+  &lt;span&gt;hello &lt;/span&gt;world
+&lt;/p&gt;
+
+//JQ代码
+//方法一
+var text = $('p').contents().filter(function() { return this.nodeType === 3; }).text().trim();
+//方法二
+var text = $(&quot;div p&quot;).clone().find('*').remove().end().text().trim();
+//后面添加.trim() 去除首尾空白 换行符等
+console.log(text); //world
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p><a name="i0k4ep"></a></p> <h2 id="格林时间：thu-may-18-2017-00-00-00-gmt-0800-中国标准时间-格式转换"><a href="#格林时间：thu-may-18-2017-00-00-00-gmt-0800-中国标准时间-格式转换" class="header-anchor">#</a> 格林时间：Thu May 18 2017 00:00:00 GMT+0800 (中国标准时间) 格式转换</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>var d = new Date('Thu May 12 2016 08:00:00 GMT+0800 (中国标准时间)');
+youWant=d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate() + ' ' + d.getHours() + ':' + d.getMinutes() + ':' + d.getSeconds();
+
+youWant= d.getFullYear() + '-'
+            + (d.getMonth()&lt;9 ? &quot;0&quot;+(d.getMonth() + 1) : (d.getMonth() + 1)) + '-'
+            + (d.getDate()&lt;10 ? &quot;0&quot;+d.getDate() : d.getDate() )+ ' '
+            + (d.getHours()&lt;10 ? &quot;0&quot;+d.getHours() : d.getHours()) + ':'
+            + (d.getMinutes()&lt;10 ? &quot;0&quot;+d.getMinutes() : d.getMinutes()) + ':'
+            + (d.getSeconds()&lt;10 ? &quot;0&quot;+d.getSeconds() : d.getSeconds());
+
+
+//yyyy-MM-dd hh:mm:ss
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><p><a name="8h60xw"></a></p> <h2 id="隐藏手机号中间四位数为“”"><a href="#隐藏手机号中间四位数为“”" class="header-anchor">#</a> 隐藏手机号中间四位数为“”</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>//方法1
+    var tel = &quot;13122223333&quot;;
+    var reg = /^(\d{3})\d{4}(\d{4})$/;
+    tel = tel.replace(reg, &quot;$1****$2&quot;);
+    console.log(tel);
+
+  //方法2
+    var tel = &quot;13122223333&quot;;
+    var hidePart = tel.substr(3, 4);
+    tel = tel.replace(hidePart, &quot;****&quot;);
+    console.log(tel);
+
+  //方法3
+  var tel = &quot;13122223333&quot;;
+  tel = tel.substr(0, 3) + '****' + tel.substr(7);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><p><a name="h7nyaq"></a></p> <h2 id="深度克隆复杂类型"><a href="#深度克隆复杂类型" class="header-anchor">#</a> 深度克隆复杂类型</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>//数组
+  var arr = [1,2,3];
+  var copyArr = arr.slice()
+  arr === copyArr //false
+
+  //对象
+  var obj = {
+    a:1,
+    b:2,
+    c:3
+  }
+  var copyObj = JSON.parse(JSON.stringify(obj))
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><p><a name="9taaei"></a></p> <h2 id="数字添加千位分隔符"><a href="#数字添加千位分隔符" class="header-anchor">#</a> 数字添加千位分隔符</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>//方法一
+  String(Number).replace(/(\d)(?=(\d{3})+$)/g, &quot;$1,&quot;);
+  //例如
+  String(123456789).replace(/(\d)(?=(\d{3})+$)/g,&quot;$1,&quot;)  // =&gt;  123,456,789
+
+//方法二
+Number.toLocaleString('en-US');
+
+(123456789).toLocaleString('en-US'); // =&gt;  123,456,789
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><p><a name="m3chdm"></a></p> <h2 id="时间格式化"><a href="#时间格式化" class="header-anchor">#</a> 时间格式化</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>//作用是根据传入的时间单位参数（timeUnit，取值&quot;d&quot;、&quot;M&quot;、&quot;y&quot;分别表示天，月，年）与间隔n（n取负数表示n天/月/年前），获得n天、或n个月、或n年前/后的日期时间。
+  function initDefaultDate(n,timeUnit) {
+    var curr_date = new Date();
+    if (timeUnit === 'd') {
+    curr_date.setDate(curr_date.getDate() + n);
+    } else if (timeUnit === 'M') {
+        curr_date.setMonth(curr_date.getMonth() + n);
+    } else if (timeUnit === 'y') {
+        curr_date.setFullYear(curr_date.getFullYear() + n);
+    }
+    var strYear = curr_date.getFullYear();
+    var strMonth = curr_date.getMonth()+1;
+    var strDay = curr_date.getDate();
+    var strHours = curr_date.getHours();
+    var strMinutes = curr_date.getMinutes();
+    var strSeconds = curr_date.getSeconds();
+    var datastr = strYear +
+    '-' + formatNumber(strMonth) +
+    '-' + formatNumber(strDay) +
+    ' ' + formatNumber(strHours) +
+    ':' + formatNumber(strMinutes) +
+    ':' + formatNumber(strSeconds);
+    return datastr;
+  }
+  //简易格式化显示日期的函数，作用为自动补0，如1=01
+  function formatNumber(value){
+    return (value &lt; 10 ? '0' : '') + value;
+  }
+  //例如
+  initDefaultDate(-1,&quot;d&quot;);    //获得当前时间1天前的日期
+  initDefaultDate(13,&quot;M&quot;);    //获得当前时间13个月后的日期
+  initDefaultDate(14,&quot;y&quot;);    //获得当前时间14年后的日期
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br></div></div><p><a name="l8tgor"></a></p> <h2 id="git一些操作"><a href="#git一些操作" class="header-anchor">#</a> GIT一些操作</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>git add .  //添加全部到git暂存区
+
+  git commit -m &quot;注释内容&quot;  // 提交暂存区里的
+
+  git checkout -b dev origin/dev    //创建远程origin的dev分支到本地
+
+  git merge dev -m &quot;要加-m注释，不然有可能会报错&quot; //在当前分支合并dev分支
+
+  git push origin master  //推送分支修改到远程仓库
+
+  git pull  //拉取远程仓库master里的内容
+
+  git push -f  origin master:test  //master分支的 内容推到test远程分支上
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><p><a name="xrdghz"></a></p> <h2 id="移动端开发，去掉手机右侧滚动条"><a href="#移动端开发，去掉手机右侧滚动条" class="header-anchor">#</a> 移动端开发，去掉手机右侧滚动条</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>html, body{
+    height:100%;
+    overflow:hidden;
+    overflow-y: scroll;
+  }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p><a name="tuq9og"></a></p> <h2 id="多页面-html-引入多个文件（js-css）"><a href="#多页面-html-引入多个文件（js-css）" class="header-anchor">#</a> 多页面(html)引入多个文件（js,css）</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>//common.js   引入路径相对于当前html页面   还可配置时间戳、版本号避免更新后缓存
+  document.write('&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;../css/Mreset.css&quot;/&gt;');
+  document.write('&lt;script type=&quot;text/javascript&quot; src=&quot;../js/jquery.min.js&quot;&gt;&lt;/script&gt;');
+  document.write('&lt;script type=&quot;text/javascript&quot; src=&quot;../js/jweixin-1.0.0.js&quot;&gt;&lt;/script&gt;');
+  document.write('&lt;script type=&quot;text/javascript&quot; src=&quot;../js/sha1.js&quot;&gt;&lt;/script&gt;');
+  document.write('&lt;script type=&quot;text/javascript&quot; src=&quot;../js/wx.js&quot;&gt;&lt;/script&gt;');
+  document.write('&lt;script type=&quot;text/javascript&quot; src=&quot;../js/share.js&quot;&gt;&lt;/script&gt; ');
+
+
+
+
+//进阶版  当前页面只需要引入 common.js就OK了
+//判断在哪个页面
+var currentPageName = location.pathname.match(/\/*[\S]*\/([\S]+)\.html/)[1];
+//添加时间戳避免缓存
+var verssionStr = '?v=' + (+new Date());
+document.write('&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/Mreset.css&quot;/&gt;');
+document.write('&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/' + currentPageName + '.css' + verssionStr + '&quot;/&gt;');
+document.write('&lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery.min.js&quot;&gt;&lt;/script&gt;');
+document.write('&lt;script type=&quot;text/javascript&quot; src=&quot;js/jweixin-1.0.0.js&quot;&gt;&lt;/script&gt;');
+document.write('&lt;script type=&quot;text/javascript&quot; src=&quot;js/sha1.js&quot;&gt;&lt;/script&gt;');
+document.write('&lt;script type=&quot;text/javascript&quot; src=&quot;js/wx.js&quot;&gt;&lt;/script&gt;');
+document.write('&lt;script type=&quot;text/javascript&quot; src=&quot;js/share.js&quot;&gt;&lt;/script&gt;');
+document.write('&lt;script type=&quot;text/javascript&quot; src=&quot;js/' + currentPageName + '.js' + verssionStr + '&quot;&gt;&lt;/script&gt;');
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br></div></div><p><a name="sqgbdm"></a></p> <h2 id="浏览器长按保存opacity-0的最上层图片要保证要保存图片的z-index：10（足够高）"><a href="#浏览器长按保存opacity-0的最上层图片要保证要保存图片的z-index：10（足够高）" class="header-anchor">#</a> 浏览器长按保存opacity=0的最上层图片要保证要保存图片的z-index：10（足够高）</h2> <p><a name="o8qswo"></a></p> <h2 id="html转img"><a href="#html转img" class="header-anchor">#</a> html转img</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>//   html2canvas.min.js    canvas2image.js
+  //html 转为 img Begin
+  var canvas2 = document.createElement(&quot;canvas&quot;);
+  var _canvas = document.querySelector('.share-dom');
+  var w = parseInt(window.getComputedStyle(_canvas).width);
+  var h = parseInt(window.getComputedStyle(_canvas).height);
+  //将canvas画布放大若干倍，然后盛放在较小的容器内，就显得不模糊了
+  canvas2.width = w * 2;
+  canvas2.height = h * 2;
+  canvas2.style.width = w + &quot;px&quot;;
+  canvas2.style.height = h + &quot;px&quot;;
+  //可以按照自己的需求，对context的参数修改,translate指的是偏移量
+  var context = canvas2.getContext(&quot;2d&quot;);
+  context.scale(2, 2);
+  html2canvas(document.querySelector('.share-dom'), {
+    canvas: canvas2
+  }).then(function(canvas) {
+    options.imageData = canvas.toDataURL(); //将图片转为base64 赋值到APP分享里
+    //初始化分享功能
+    if(inApp()) {
+      BestpayHtml5.config('4200', false, '60', '6000');
+      setTitleBar();
+    } else {
+      share();
+    };
+    var context = canvas.getContext('2d');
+    // 【重要】关闭抗锯齿
+    context.mozImageSmoothingEnabled = false;
+    context.webkitImageSmoothingEnabled = false;
+    context.msImageSmoothingEnabled = false;
+    context.imageSmoothingEnabled = false;
+    // 【重要】默认转化的格式为png,也可设置为其他格式
+    var img = Canvas2Image.convertToJPEG(canvas, canvas.width, canvas.height);
+    document.querySelector(&quot;.share-img-box&quot;).appendChild(img);
+
+  });//html 转为 img End
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br></div></div><p><a name="s0v7tq"></a></p> <h2 id="h5-中video标签"><a href="#h5-中video标签" class="header-anchor">#</a> H5 中video标签</h2> <p>必须使用js动态添加到页面中</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>$('.video-box').html('&lt;video ' +
+		'id=&quot;videoALL&quot; ' +
+		'class=&quot;video&quot; ' +
+		'width=&quot;90%&quot; ' +
+		'controls=&quot;controls&quot; ' +
+		'poster=&quot;img/poster.png&quot; ' +
+		'preload=&quot;auto&quot; ' +
+		'webkit-playsinline=&quot;true&quot; ' +
+		'playsinline=&quot;true&quot; ' +
+		'x-webkit-airplay=&quot;allow&quot; ' +
+		'x5-video-player-type=&quot;h5&quot;  ' +
+		'x5-video-player-fullscreen=&quot;true&quot; ' +
+		'x5-video-orientation=&quot;portraint&quot; ' +
+		'style=&quot;object-fit:fill&quot;&gt; ' +
+		'&lt;source src=&quot;video/video.mp4&quot; type=&quot;video/mp4&quot;&gt; ' +
+		'&lt;/video&gt;');
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><p><a name="xiz0vu"></a></p> <h2 id="当前页面监听当前页面storage变化"><a href="#当前页面监听当前页面storage变化" class="header-anchor">#</a> 当前页面监听当前页面storage变化</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>var orignalSetItem = localStorage.setItem;
+	localStorage.setItem = function(key, newValue) {
+		var setItemEvent = new Event(&quot;setItemEvent&quot;);
+		setItemEvent.newValue = newValue;
+		window.dispatchEvent(setItemEvent);
+		orignalSetItem.apply(this, arguments);
+	};
+	window.addEventListener(&quot;setItemEvent&quot;, function(e) {
+		var newValue = e.newValue;
+		renderShareImg(newValue);
+});
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p><a name="7glymx"></a></p> <h2 id="h5弹幕"><a href="#h5弹幕" class="header-anchor">#</a> H5弹幕</h2> <p>原生js实现弹幕弹幕分轨，不重叠，移动，发送弹幕，发送的弹幕颜色高亮</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+
+	&lt;head&gt;
+		&lt;meta charset=&quot;UTF-8&quot; /&gt;
+		&lt;meta name=viewport content=&quot;width=device-width, initial-scale=1, user-scalable=no&quot;&gt;
+		&lt;title&gt;弹幕&lt;/title&gt;
+		&lt;style type=&quot;text/css&quot;&gt;
+			html,
+			body,
+			div,
+			p {
+				margin: 0;
+				padding: 0;
+			}
+			
+			html,
+			body {
+				width: 100%;
+				height: 100%;
+			}
+			
+			.box {
+				height: 100%;
+				background: darkgreen;
+				overflow: hidden;
+			}
+			
+			.brrage {
+				width: 90%;
+				height: 210px;
+				margin: 10px auto;
+				position: relative;
+				border: 1px solid #fff;
+				border-radius: 8px;
+				color: #fff;
+				overflow: hidden;
+			}
+			
+			.brrage p {
+				height: 21px;
+				word-break: keep-all;
+				white-space: nowrap;
+				line-height: 21px;
+				position: absolute;
+				left: 100%;
+			}
+			
+			.current {
+				color: orange;
+			}
+		&lt;/style&gt;
+	&lt;/head&gt;
+
+	&lt;body&gt;
+		&lt;div class=&quot;box&quot;&gt;
+			&lt;div class=&quot;brrage&quot;&gt;
+				&lt;p&gt;城市因你们的辛劳而美丽&lt;/p&gt;
+				&lt;p&gt;千言万语汇成一首歌，名叫感激&lt;/p&gt;
+				&lt;p&gt;感谢有你~ ❤❤❤❤&lt;/p&gt;
+				&lt;p&gt;我承诺包裹严实后再扔碎玻璃&lt;/p&gt;
+				&lt;p&gt;不论未来多远，你永远是我最感激的人&lt;/p&gt;
+				&lt;p&gt;宁可一人脏，换来万家洁&lt;/p&gt;
+				&lt;p&gt;在我心中你们永远是最伟大的~&lt;/p&gt;
+				&lt;p&gt;愿你们被世界温柔以待&lt;/p&gt;
+				&lt;p&gt;职业平凡，奉献伟大&lt;/p&gt;
+				&lt;p&gt;善行无迹，尽善净美&lt;/p&gt;
+			&lt;/div&gt;
+			&lt;input id=&quot;input&quot; type=&quot;text&quot; name=&quot;&quot; placeholder=&quot;输入弹幕内容&quot;&gt;
+			&lt;button id=&quot;btn&quot;&gt;发送&lt;/button&gt;
+		&lt;/div&gt;
+
+	&lt;/body&gt;
+	&lt;script&gt;
+		var words = [
+			&quot;城市因你们的辛劳而美丽&quot;,
+			&quot;在你们的专属节日，对你们说一声谢谢&quot;,
+			&quot;职业平凡，奉献伟大&quot;,
+			&quot;社会因你们而不平凡&quot;,
+			&quot;千言万语汇成一首歌，名叫感激&quot;,
+			&quot;再美的风景也抵不过你们的身影&quot;,
+			&quot;发射小心心，biubiubiu&quot;,
+			&quot;感谢有你~ ❤❤❤❤&quot;,
+			&quot;你们的每一份付出都值得尊重&quot;,
+			&quot;致敬城市中最可爱的人&quot;,
+			'您辛苦了~',
+			'愿你们被世界温柔以待',
+			'谢谢你们的默默付出',
+			'尊重每一个清洁工',
+			'为他们减轻负担，让我们行动起来',
+			'清洁一小步，文明一大步',
+			'感恩~感恩~感恩~',
+			'我承诺包裹严实后再扔碎玻璃',
+			'谢谢你们每天给我们一个清洁城市',
+			'善行无迹，尽善净美',
+			'清洁城市，从你我做起',
+			'不论未来多远，你永远是我最感激的人',
+			'让我们为清洁工们鼓掌！喝彩！',
+			'摒弃坏习惯，从小事做起！',
+			'爱护环境，人人有责！',
+			'宁可一人脏，换来万家洁',
+			'你弯下的腰驼起的是一个城市的文明',
+			'你们扫净了街道，也扫出了皱纹',
+			'谢谢你们的从不缺席',
+			'清洁工，是我听过最美的名字~',
+			'没有豪言壮志，只有默默奉献',
+			'谢谢你们，我们的“城市美容师”',
+			'橙色是这个城市最美的颜色',
+			'我要给你们点赞！',
+			'在我心中你们永远是最伟大的~'
+		];
+
+		window.onload = function() {
+			var timer = null;
+			var input = document.querySelector('#input');
+			var btn = document.querySelector('#btn');
+			var list = document.querySelectorAll('.brrage p');
+			var boxWidth = getElmStyle('.brrage', 'width');
+			var len = list.length;
+			var leftArr = [];
+			for(var i = 0; i &lt; len; i++) {
+				var randomTop = Math.floor(Math.random() * 10) * 21;
+				list[i].style.top = i * 21 + 'px';
+				var itemLeft;
+				if(i%2===0){
+					itemLeft = getElmStyle(list[i], 'left') + (Math.random() * boxWidth * 3 / 2);
+				}else {
+					itemLeft = getElmStyle(list[i], 'left') + (Math.random() * boxWidth * 3 / 2) + (boxWidth *3 / 2);
+				}
+				leftArr.push(itemLeft);
+				list[i].style.left = itemLeft + 'px';
+			}
+			move();
+			window.addEventListener('resize',function(){
+				move();
+			})
+			btn.onclick = function() {
+				var text = input.value;
+				if(text) {
+					try {
+						for(var i = 0; i &lt; list.length; i++) {
+							if(getElmStyle(list[i], 'left') &gt;= boxWidth) {
+								list[i].innerText = text;
+								list[i].className = 'current';
+								words.push(text)
+								throw new Errow('终端循环');
+							}
+						}
+					} catch(e) {
+
+					}
+					input.value = '';
+				} else {
+					alert('请输入内容')
+				}
+			};
+			//获取元素css属性值   C3选择器或 dom，属性名
+			function getElmStyle(selector, style) {
+				if(typeof selector === 'string') {
+					return parseFloat(document.defaultView.getComputedStyle(document.querySelector(selector), null)[style])
+				} else {
+					return parseFloat(document.defaultView.getComputedStyle(selector, null)[style])
+				}
+			}
+			// 弹幕移动
+			function move() {
+				cancelAnimationFrame(timer);
+				timer = null;
+				for(var i = 0; i &lt; len; i++) {
+					var randomTop = Math.floor(Math.random() * 10) * 21;
+					list[i].style.top = i * 21 + 'px';
+					var itemLeft = getElmStyle(list[i], 'left');
+					var itemWidth = getElmStyle(list[i], 'width');
+
+					if(-itemLeft &gt; itemWidth) { //移除弹幕可视区域
+						list[i].className = '';
+						if(leftArr[i] &gt; (boxWidth + 300)) { //距离边缘300px
+							leftArr[i] += (Math.random() * 600 - 300);
+							list[i].style.left = leftArr[i] + 'px';
+						} else {
+							leftArr[i] += Math.random() * 600;
+							list[i].style.left = leftArr[i] + 'px';
+						}
+						list[i].innerText = words[Math.floor(Math.random() * words.length)]
+					} else {
+						itemLeft -= 2;
+						list[i].style.left = itemLeft + 'px';
+					};
+				}
+				timer = requestAnimationFrame(move);
+			}
+		}
+	&lt;/script&gt;
+
+&lt;/html&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br><span class="line-number">111</span><br><span class="line-number">112</span><br><span class="line-number">113</span><br><span class="line-number">114</span><br><span class="line-number">115</span><br><span class="line-number">116</span><br><span class="line-number">117</span><br><span class="line-number">118</span><br><span class="line-number">119</span><br><span class="line-number">120</span><br><span class="line-number">121</span><br><span class="line-number">122</span><br><span class="line-number">123</span><br><span class="line-number">124</span><br><span class="line-number">125</span><br><span class="line-number">126</span><br><span class="line-number">127</span><br><span class="line-number">128</span><br><span class="line-number">129</span><br><span class="line-number">130</span><br><span class="line-number">131</span><br><span class="line-number">132</span><br><span class="line-number">133</span><br><span class="line-number">134</span><br><span class="line-number">135</span><br><span class="line-number">136</span><br><span class="line-number">137</span><br><span class="line-number">138</span><br><span class="line-number">139</span><br><span class="line-number">140</span><br><span class="line-number">141</span><br><span class="line-number">142</span><br><span class="line-number">143</span><br><span class="line-number">144</span><br><span class="line-number">145</span><br><span class="line-number">146</span><br><span class="line-number">147</span><br><span class="line-number">148</span><br><span class="line-number">149</span><br><span class="line-number">150</span><br><span class="line-number">151</span><br><span class="line-number">152</span><br><span class="line-number">153</span><br><span class="line-number">154</span><br><span class="line-number">155</span><br><span class="line-number">156</span><br><span class="line-number">157</span><br><span class="line-number">158</span><br><span class="line-number">159</span><br><span class="line-number">160</span><br><span class="line-number">161</span><br><span class="line-number">162</span><br><span class="line-number">163</span><br><span class="line-number">164</span><br><span class="line-number">165</span><br><span class="line-number">166</span><br><span class="line-number">167</span><br><span class="line-number">168</span><br><span class="line-number">169</span><br><span class="line-number">170</span><br><span class="line-number">171</span><br><span class="line-number">172</span><br><span class="line-number">173</span><br><span class="line-number">174</span><br><span class="line-number">175</span><br><span class="line-number">176</span><br><span class="line-number">177</span><br><span class="line-number">178</span><br><span class="line-number">179</span><br><span class="line-number">180</span><br><span class="line-number">181</span><br><span class="line-number">182</span><br><span class="line-number">183</span><br><span class="line-number">184</span><br><span class="line-number">185</span><br><span class="line-number">186</span><br><span class="line-number">187</span><br><span class="line-number">188</span><br><span class="line-number">189</span><br><span class="line-number">190</span><br><span class="line-number">191</span><br><span class="line-number">192</span><br><span class="line-number">193</span><br><span class="line-number">194</span><br><span class="line-number">195</span><br></div></div><p><a name="grf4lb"></a></p> <h2 id="静止用户选择，微信浏览器禁止长按弹出保存图片弹窗"><a href="#静止用户选择，微信浏览器禁止长按弹出保存图片弹窗" class="header-anchor">#</a> 静止用户选择，微信浏览器禁止长按弹出保存图片弹窗</h2> <p>选择包括文本和图片</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>input {
+	-webkit-user-select: none;
+	user-select: none;
+	-webkit-touch-callout: none;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p><a name="6k3zam"></a></p> <h2 id="微信浏览器中自动播放音频"><a href="#微信浏览器中自动播放音频" class="header-anchor">#</a> 微信浏览器中自动播放音频</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>function audioAutoPlay(id) {
+	var audio = document.getElementById(id);
+	audio.play();
+	document.addEventListener(&quot;WeixinJSBridgeReady&quot;, function() {
+		audio.play();
+	}, false);
+	document.addEventListener('YixinJSBridgeReady', function() {
+		audio.play();
+	}, false);
+}
+
+audioAutoPlay('car_audio');//调用函数，传参audio标签id
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><p><a name="i3i2cr"></a></p> <h2 id="文字loading-三个点动画"><a href="#文字loading-三个点动画" class="header-anchor">#</a> 文字Loading...三个点动画</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>//css
+dot {
+	display:inline-block;
+	height:1em;
+	line-height:1;
+	text-align:left;
+	vertical-align: -.25em;
+	overflow: hidden;
+}
+dot::before {
+	display:block;
+	content:'...\A..\A.';
+	white-space:pre-wrap;
+	animation:dot 3s infinite step-start;
+}
+@keyframes dot {
+	33% {
+		transform: translateY(-2em);	
+	}
+	66% {
+		transform: translateY(-1em);
+	}
+}
+//html
+&lt;div class=&quot;bk&quot;&gt;
+	Loading&lt;dot&gt;...&lt;/dot&gt;
+&lt;/div&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br></div></div><p><a name="e0gthd"></a></p> <h2 id="有样式的console-log（）"><a href="#有样式的console-log（）" class="header-anchor">#</a> 有样式的console.log（）</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>console.log(
+    `%c index %c v3.0.2 %c`,
+    'background:#35495E; padding: 1px; border-radius: 3px 0 0 3px; color: #fff;',
+    `background:#43B883; padding: 1px; border-radius: 0 3px 3px 0;  color: #fff;`,
+    'background:transparent'
+)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p><a name="l88nbo"></a></p> <h2 id="git本地仓库与远程仓库关联"><a href="#git本地仓库与远程仓库关联" class="header-anchor">#</a> git本地仓库与远程仓库关联</h2> <p>1、完成本地仓库的相关配置<br>    git init;初始化git仓库<br>    touch .gitignore;创建忽略项配置文件<br>2、执行git add; git commit -m '...'<br>3、创建远程仓库  <br>4、连接远程仓库和本地仓库 git remote add origin {远程仓库地址}<br>5、这里特别注意，我们第一次<code>push</code>的时候,加上<code>-u</code>参数,Git就会把本地的master分支和远程的master分支进行关联起来,我们以后的<code>push</code>操作就不再需要加上<code>-u</code>参数了</p> <p><a name="9L6NB"></a></p> <h2 id="js浮点数精确运算"><a href="#js浮点数精确运算" class="header-anchor">#</a> JS浮点数精确运算</h2> <p>1.2 + 0.7 + 0.7 + 'MW·h';常规运算会产生多位小数 2.599999999MW·h<br>Math.plus(1.2, 0.7 ,0.7) + 'MW·h'  可实现精确计算 2.6MW·h</p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token comment">/**
+ * Math添加精确乘法
+ */</span>
+Math<span class="token punctuation">.</span><span class="token function-variable function">times</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+    <span class="token keyword">var</span> _list <span class="token operator">=</span> arguments<span class="token punctuation">,</span>
+        times <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">,</span>
+        result <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>_list<span class="token punctuation">.</span>length<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">var</span> y <span class="token operator">=</span> <span class="token punctuation">(</span>_list<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">+</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">&quot;.&quot;</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>y<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            times <span class="token operator">*=</span> Math<span class="token punctuation">.</span><span class="token function">pow</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span>y<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token punctuation">;</span>
+<span class="token comment">//            var _times = Math.pow(10,y.length);</span>
+<span class="token comment">//            result = (result * (_list[i] * _times));</span>
+            result <span class="token operator">=</span> result <span class="token operator">*</span> <span class="token punctuation">(</span>_list<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">&quot;.&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">&quot;&quot;</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+            result <span class="token operator">=</span> <span class="token punctuation">(</span>result <span class="token operator">*</span> <span class="token punctuation">(</span>_list<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">return</span> result<span class="token operator">/</span>times<span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span>
+<span class="token comment">/**
+ * Math添加精确加法
+ */</span>
+Math<span class="token punctuation">.</span><span class="token function-variable function">plus</span>  <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+    <span class="token keyword">var</span> _list <span class="token operator">=</span> arguments<span class="token punctuation">,</span>
+        times <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">,</span>
+        result <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token comment">//先获取最大倍数</span>
+    <span class="token keyword">var</span> len <span class="token operator">=</span> _list<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">var</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>len<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">var</span> y <span class="token operator">=</span> <span class="token punctuation">(</span>_list<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">+</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">&quot;.&quot;</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>y <span class="token operator">&amp;&amp;</span> times <span class="token operator">&lt;</span> y<span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            times <span class="token operator">=</span> y<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    times <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">pow</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span>times<span class="token punctuation">)</span> <span class="token punctuation">;</span>
+
+    <span class="token comment">//整数计算</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">var</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>len<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+        result <span class="token operator">=</span> <span class="token punctuation">(</span>result <span class="token operator">+</span> <span class="token punctuation">(</span>_list<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">*</span> times<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">return</span> result<span class="token operator">/</span>times<span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br></div></div><p><a name="Avvra"></a></p> <h3 id="退出或刷新页面前提示"><a href="#退出或刷新页面前提示" class="header-anchor">#</a> 退出或刷新页面前提示</h3> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token function">mounted</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  window<span class="token punctuation">.</span>onbeforeunload <span class="token operator">=</span> cleanRedisCacheLoad<span class="token punctuation">;</span>
+    window<span class="token punctuation">.</span>onunload <span class="token operator">=</span> cleanRedisCacheLoad<span class="token punctuation">;</span>
+    <span class="token keyword">function</span> <span class="token function">cleanRedisCacheLoad</span> <span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    	<span class="token keyword">var</span> event <span class="token operator">=</span> event <span class="token operator">||</span> window<span class="token punctuation">.</span>event<span class="token punctuation">;</span>
+    	<span class="token comment">// 兼容IE8和Firefox 4之前的版本</span>
+    	<span class="token keyword">if</span> <span class="token punctuation">(</span>event<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    	event<span class="token punctuation">.</span>returnValue <span class="token operator">=</span> <span class="token string">&quot;确定要关闭窗口吗？&quot;</span><span class="token punctuation">;</span>
+    	<span class="token punctuation">}</span>
+    	<span class="token comment">// Chrome, Safari, Firefox 4+, Opera 12+ , IE 9+</span>
+    	<span class="token keyword">return</span> <span class="token string">'确定要关闭窗口吗？'</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">lastUpdate:</span> <span class="time">11/28/2019, 4:58:39 PM</span></div></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/wzp.github.io/pages/folder1/test3.html">vue笔记</a>
       →
     </span></p></div> </main></div><div class="global-ui"></div></div>
-    <script src="/wzp.github.io/assets/js/app.5f30b3b7.js" defer></script><script src="/wzp.github.io/assets/js/2.426bab4a.js" defer></script><script src="/wzp.github.io/assets/js/8.35e9a7cf.js" defer></script>
+    <script src="/wzp.github.io/assets/js/app.02196188.js" defer></script><script src="/wzp.github.io/assets/js/2.426bab4a.js" defer></script><script src="/wzp.github.io/assets/js/8.e363f5d8.js" defer></script>
   </body>
 </html>
