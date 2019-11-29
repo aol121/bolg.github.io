@@ -6,8 +6,9 @@ module.exports = {
     // 注入到当前页面的 HTML <head> 中的标签
     head: [
         ['link', { rel: 'icon', href: '/logo.png' }],  //浏览器的标签栏的网页图标
+        ['link', { rel: 'stylesheet', href: '/live2dModels/live2d/css/common.css' }],  //引入css
         ['script', { type: 'text/javascript', src: '/live2dModels/live2d/js/live2d.js' }],  //引入live2d
-        ['script', { type: 'text/javascript',async:'async', src: '/live2dModels/live2d/js/init.js' }],  //引入live2d初始化脚本
+        ['script', { type: 'text/javascript', src: '/live2dModels/live2d/js/init.js' }],  //引入live2d初始化脚本,async:'async'
     ],
     markdown: {
         lineNumbers: true
