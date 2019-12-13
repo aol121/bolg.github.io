@@ -1,11 +1,11 @@
 <template>
   <div class="box">
     <div class="top">
-      <img class="top-img" height="73" src="/img/top-1.png" alt="">
+      <img class="top-img" height="73" src="./img/top-1.png" alt="">
       <div class="middle">
-        <img class="mid-img" height="235" src="/img/mid-2.png" alt="">
+        <img class="mid-img" height="235" src="./img/mid-2.png" alt="">
         <div class="bottom">
-          <img class="bot-img" height="79" src="/img/bot.png" >
+          <img class="bot-img" height="79" src="./img/bot.png" >
         </div>
       </div>
     </div>
