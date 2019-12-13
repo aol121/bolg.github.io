@@ -1,9 +1,9 @@
 ---
 home: true
-heroImage: /logo.png
+heroImage: /logo-2.png
 heroText: 辰砂的前端记录
 tagline: 一点一滴都是进步
-actionText: 狠狠点我 →
+actionText: 点到就是赚到 →
 actionLink: /pages/folder1/test1.md
 features:
 - title: 心灵鸡汤
@@ -15,6 +15,6 @@ features:
 ---
 
 
-<!-- <ClientOnly>
-  <BottomData/>
-</ClientOnly> --> 
+<ClientOnly>
+  <Card/>
+</ClientOnly> 
